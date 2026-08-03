@@ -29,11 +29,11 @@ public class ItemStackUtils {
         final Identifier mainHandItemLocation = itemRegistry.getKey(mainHandStack.getItem());
         final Identifier offHandItemLocation = itemRegistry.getKey(offHandStack.getItem());
 
-        if (blockRegistry.containsKey(mainHandItemLocation) && blockRegistry.get(mainHandItemLocation) instanceof IMateriallyTexturedBlock) {
+        if (blockRegistry.containsKey(mainHandItemLocation) && blockRegistry.getValue(mainHandItemLocation) instanceof IMateriallyTexturedBlock) {
             return mainHandStack;
         }
 
-        if (blockRegistry.containsKey(offHandItemLocation) && blockRegistry.get(offHandItemLocation) instanceof IMateriallyTexturedBlock) {
+        if (blockRegistry.containsKey(offHandItemLocation) && blockRegistry.getValue(offHandItemLocation) instanceof IMateriallyTexturedBlock) {
             return offHandStack;
         }
 

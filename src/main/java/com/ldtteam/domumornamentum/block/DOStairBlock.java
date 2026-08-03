@@ -1,10 +1,16 @@
 package com.ldtteam.domumornamentum.block;
 
+
+
+
+
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +31,7 @@ import java.util.stream.IntStream;
  */
 public class DOStairBlock extends Block implements SimpleWaterloggedBlock
 {
-    public static final    DirectionProperty         FACING         = HorizontalDirectionalBlock.FACING;
+    public static final    EnumProperty<Direction>         FACING         = HorizontalDirectionalBlock.FACING;
     public static final    EnumProperty<Half>        HALF           = BlockStateProperties.HALF;
     public static final    EnumProperty<StairsShape> SHAPE          = BlockStateProperties.STAIRS_SHAPE;
     public static final    BooleanProperty           WATERLOGGED    = BlockStateProperties.WATERLOGGED;
@@ -212,16 +218,24 @@ public class DOStairBlock extends Block implements SimpleWaterloggedBlock
     }
 
     @Override
-    public BlockState updateShape(BlockState p_56925_, Direction p_56926_, BlockState p_56927_, LevelAccessor p_56928_, BlockPos p_56929_, BlockPos p_56930_)
+    public BlockState updateShape(
+        final BlockState p_56925_,
+        final LevelReader p_56928_,
+        final ScheduledTickAccess tickAccess,
+        final BlockPos p_56929_,
+        final Direction p_56926_,
+        final BlockPos p_56930_,
+        final BlockState p_56927_,
+        final RandomSource randomSource)
     {
         if (p_56925_.getValue(WATERLOGGED))
         {
-            p_56928_.scheduleTick(p_56929_, Fluids.WATER, Fluids.WATER.getTickDelay(p_56928_));
+            tickAccess.scheduleTick(p_56929_, Fluids.WATER, Fluids.WATER.getTickDelay(p_56928_));
         }
 
         return p_56926_.getAxis().isHorizontal()
                  ? p_56925_.setValue(SHAPE, getStairsShape(p_56925_, p_56928_, p_56929_))
-                 : super.updateShape(p_56925_, p_56926_, p_56927_, p_56928_, p_56929_, p_56930_);
+                 : super.updateShape(p_56925_, p_56928_, tickAccess, p_56929_, p_56926_, p_56930_, p_56927_, randomSource);
     }
 
     @Override

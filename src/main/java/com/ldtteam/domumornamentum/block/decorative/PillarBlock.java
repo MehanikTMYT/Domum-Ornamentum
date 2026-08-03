@@ -78,9 +78,9 @@ public class PillarBlock extends AbstractBlock<PillarBlock> implements IMaterial
     /**
      * base constructor
      */
-    public PillarBlock()
+    public PillarBlock(final BlockBehaviour.Properties properties)
     {
-        super(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
+        super(properties.mapColor(MapColor.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
         this.registerDefaultState(this.stateDefinition.any().setValue(COLUMN,PillarShapeType.FULL_PILLAR));
     }
 
@@ -286,7 +286,7 @@ public class PillarBlock extends AbstractBlock<PillarBlock> implements IMaterial
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public @NotNull ItemStack getCloneItemStack(final @NotNull BlockState state, final @NotNull HitResult target, final LevelReader world, final @NotNull BlockPos pos, final @NotNull Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

@@ -56,9 +56,9 @@ public class AllBrickStairBlock extends AbstractBlockStairs<AllBrickStairBlock> 
     /**
      * base constructor
      */
-    public AllBrickStairBlock()
+    public AllBrickStairBlock(final Properties properties)
     {
-        super(Blocks.OAK_PLANKS::defaultBlockState, Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
+        super(Blocks.OAK_PLANKS::defaultBlockState, properties.mapColor(MapColor.STONE).sound(SoundType.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
     }
 
     @Override
@@ -80,7 +80,7 @@ public class AllBrickStairBlock extends AbstractBlockStairs<AllBrickStairBlock> 
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

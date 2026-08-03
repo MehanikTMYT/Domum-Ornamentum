@@ -43,9 +43,9 @@ public class FenceGateBlock extends AbstractBlockFenceGate<FenceGateBlock> imple
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
-    public FenceGateBlock()
+    public FenceGateBlock(final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F));
+        super(properties.mapColor(MapColor.WOOD).strength(2.0F, 3.0F));
     }
 
     @Override
@@ -67,7 +67,7 @@ public class FenceGateBlock extends AbstractBlockFenceGate<FenceGateBlock> imple
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

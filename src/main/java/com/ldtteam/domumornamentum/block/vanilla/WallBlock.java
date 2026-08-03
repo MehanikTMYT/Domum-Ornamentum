@@ -1,5 +1,7 @@
 package com.ldtteam.domumornamentum.block.vanilla;
 
+
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
@@ -46,17 +48,17 @@ public class WallBlock extends AbstractBlockWall<WallBlock> implements IMaterial
                                                                                .build();
 
     public static ImmutableMap<Direction, EnumProperty<WallSide>> PROPERTIES = ImmutableMap.of(
-            Direction.NORTH, WallBlock.NORTH_WALL,
-            Direction.EAST, WallBlock.EAST_WALL,
-            Direction.SOUTH, WallBlock.SOUTH_WALL,
-            Direction.WEST, WallBlock.WEST_WALL
+            Direction.NORTH, BlockStateProperties.NORTH_WALL,
+            Direction.EAST, BlockStateProperties.EAST_WALL,
+            Direction.SOUTH, BlockStateProperties.SOUTH_WALL,
+            Direction.WEST, BlockStateProperties.WEST_WALL
     );
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
-    public WallBlock()
+    public WallBlock(final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F));
+        super(properties.mapColor(MapColor.WOOD).strength(2.0F, 3.0F));
     }
     @Override
     public @NotNull List<IMateriallyTexturedBlockComponent> getComponents()
@@ -76,7 +78,7 @@ public class WallBlock extends AbstractBlockWall<WallBlock> implements IMaterial
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

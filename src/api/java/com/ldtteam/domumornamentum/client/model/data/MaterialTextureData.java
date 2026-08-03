@@ -14,7 +14,6 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -101,17 +100,19 @@ public record MaterialTextureData(Map<Identifier, Block> getTexturedComponents)
             return EMPTY;
 
         final Builder newData = new Builder();
-        nbt.getAllKeys().forEach(key -> {
-            final Identifier name = Identifier.parse(nbt.getString(key));
-                newData.setComponent(Identifier.parse(key), BuiltInRegistries.BLOCK.get(name));
-        });
+        nbt.keySet().forEach(key ->
+            nbt.getString(key).ifPresent(value ->
+            {
+                final Identifier name = Identifier.parse(value);
+
+                BuiltInRegistries.BLOCK.get(name).ifPresent(holder ->
+                    newData.setComponent(Identifier.parse(key), holder.value()));
+            }));
         return newData.build();
     }
 
     /**
      * Writes this textureData into given itemStack.
-     * 
-     * @see BlockEntity#saveToItem(ItemStack, net.minecraft.core.HolderLookup.Provider)
      */
     public void writeToItemStack(final ItemStack itemStack)
     {

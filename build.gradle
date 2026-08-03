@@ -28,3 +28,57 @@ tableau {
         })
     }
 }
+
+// PORT-26.1: legacy datagen temporarily excluded
+sourceSets {
+    main {
+        java {
+            exclude 'com/ldtteam/domumornamentum/datagen/**'
+        }
+    }
+}
+
+// PORT-26.1: optional JEI and legacy tint code temporarily excluded
+sourceSets {
+    main {
+        java {
+            exclude 'com/ldtteam/domumornamentum/jei/**'
+            exclude 'com/ldtteam/domumornamentum/client/color/**'
+            exclude 'com/ldtteam/domumornamentum/client/event/handlers/RegisterColorHandlersEventHandler.java'
+        }
+    }
+}
+
+
+// PORT-26.1: native EMI dependency
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    compileOnly "dev.emi:emi-neoforge:${property('emi.version')}:api"
+    runtimeOnly "dev.emi:emi-neoforge:${property('emi.version')}"
+}
+
+
+// PORT-26.1: full compiler diagnostics
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.addAll([
+        '-Xdiags:verbose',
+        '-Xmaxerrs', '5000',
+        '-Xmaxwarns', '5000'
+    ])
+}
+
+
+// PORT-26.1: legacy ghost preview temporarily excluded
+// Restore after migration to RenderPipeline and block render states.
+sourceSets {
+    main {
+        java {
+            exclude 'com/ldtteam/domumornamentum/client/render/ModRenderTypes.java'
+            exclude 'com/ldtteam/domumornamentum/client/render/ModelGhostRenderer.java'
+            exclude 'com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java'
+        }
+    }
+}

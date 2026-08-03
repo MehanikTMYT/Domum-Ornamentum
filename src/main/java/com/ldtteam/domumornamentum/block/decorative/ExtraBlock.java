@@ -30,9 +30,9 @@ public class ExtraBlock extends AbstractBlock<ExtraBlock>
     /**
      * Constructor of the FullBlock.
      */
-    public ExtraBlock(final ExtraBlockType type)
+    public ExtraBlock(final ExtraBlockType type, final Properties properties)
     {
-        super(type.adjustProperties(Properties.of().mapColor(MapColor.WOOD).sound(type.getSoundType()).strength(BLOCK_HARDNESS, RESISTANCE)));
+        super(type.adjustProperties(properties.mapColor(MapColor.WOOD).sound(type.getSoundType()).strength(BLOCK_HARDNESS, RESISTANCE)));
         this.type = type;
     }
 

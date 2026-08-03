@@ -52,9 +52,9 @@ public class DoorBlock extends AbstractBlockDoor<DoorBlock> implements IMaterial
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
-    public DoorBlock()
+    public DoorBlock(final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn((state, blockGetter, pos, type) -> false));
+        super(properties.mapColor(MapColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn((state, blockGetter, pos, type) -> false));
         this.registerDefaultState(this.defaultBlockState().setValue(TYPE, DoorType.FULL));
     }
 
@@ -111,7 +111,7 @@ public class DoorBlock extends AbstractBlockDoor<DoorBlock> implements IMaterial
         return new MateriallyTexturedBlockEntity(blockPos, blockState);
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess(), TYPE);

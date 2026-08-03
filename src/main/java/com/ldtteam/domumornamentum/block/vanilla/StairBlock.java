@@ -44,9 +44,9 @@ public class StairBlock extends net.minecraft.world.level.block.StairBlock imple
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
-    public StairBlock()
+    public StairBlock(final Properties properties)
     {
-        super(OAK_PLANKS.defaultBlockState(), Properties.of().mapColor(MapColor.WOOD).noOcclusion().strength(2.0F, 3.0F));
+        super(OAK_PLANKS.defaultBlockState(), properties.mapColor(MapColor.WOOD).noOcclusion().strength(2.0F, 3.0F));
     }
 
     @Override
@@ -74,7 +74,7 @@ public class StairBlock extends net.minecraft.world.level.block.StairBlock imple
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

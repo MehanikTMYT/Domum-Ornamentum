@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "floating_carpets",
   "ingredients": [
-    {
-      "item": "minecraft:yellow_wool"
-    },
-    {
-      "item": "minecraft:yellow_wool"
-    },
-    {
-      "tag": "c:strings"
-    }
+    "minecraft:yellow_wool",
+    "minecraft:yellow_wool",
+    "#c:strings"
   ],
   "result": {
     "count": 3,

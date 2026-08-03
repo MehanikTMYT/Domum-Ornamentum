@@ -14,10 +14,10 @@ public class SelfUpgradingDoubleHighBlockItem extends DoubleHighBlockItem
         super(block, properties);
     }
 
-    @Override
-    public void verifyComponentsAfterLoad(final ItemStack itemStack)
+    // PORT-26.1: explicit legacy-data migration helper.
+    public void upgradeLegacyComponents(final ItemStack itemStack)
     {
-        super.verifyComponentsAfterLoad(itemStack);
+
         SelfUpgradingBlockItem.upgrade(itemStack);
     }
 }

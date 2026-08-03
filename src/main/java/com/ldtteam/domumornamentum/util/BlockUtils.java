@@ -11,8 +11,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.util.ProblemReporter;
 import net.neoforged.fml.loading.FMLEnvironment;
 
 import java.util.Collections;
@@ -50,7 +52,12 @@ public class BlockUtils
         }
 
         final ItemStack result = new ItemStack(blockEntity.getBlockState().getBlock());
-        texturedBlockEntity.saveToItem(result, provider);
+
+        final TagValueOutput output = TagValueOutput.createWithContext(ProblemReporter.DISCARDING, provider);
+        texturedBlockEntity.saveCustomOnly(output);
+        texturedBlockEntity.removeComponentsFromTag(output);
+        BlockItem.setBlockEntityData(result, texturedBlockEntity.getType(), output);
+        result.applyComponents(texturedBlockEntity.collectComponents());
 
         if (blockStateProperties.length > 0)
         {
@@ -71,7 +78,7 @@ public class BlockUtils
         final Property<T> property,
         final T value)
     {
-        if (!FMLEnvironment.production && !(itemStack.getItem() instanceof BlockItem))
+        if (!FMLEnvironment.isProduction() && !(itemStack.getItem() instanceof BlockItem))
         {
             throw new IllegalArgumentException("item not BlockItem: " + itemStack.getItem());
         }

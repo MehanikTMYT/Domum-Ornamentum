@@ -1,5 +1,9 @@
 package com.ldtteam.domumornamentum.client.screens;
 
+
+
+import net.minecraft.client.input.MouseButtonEvent;
+import net.minecraft.client.renderer.RenderPipelines;
 import com.ldtteam.domumornamentum.DomumOrnamentum;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlock;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent;
@@ -9,7 +13,7 @@ import com.ldtteam.domumornamentum.container.ArchitectsCutterContainer;
 import com.ldtteam.domumornamentum.item.interfaces.IDoItem;
 import com.ldtteam.domumornamentum.util.Constants;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
@@ -71,24 +75,17 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
     private static int variantIndexCache = -1;
 
     public ArchitectsCutterScreen(ArchitectsCutterContainer containerIn, Inventory playerInv, Component titleIn) {
-        super(containerIn, playerInv, titleIn);
+        super(containerIn, playerInv, titleIn, CUTTER_BG_W, CUTTER_BG_H);
         --this.titleLabelY;
-        this.imageWidth = CUTTER_BG_W;
-        this.imageHeight = CUTTER_BG_H;
     }
 
-    @Override
-    public void render(@NotNull GuiGraphics graphics, int mouseX, int mouseY, float partialTicks) {
-        super.render(graphics, mouseX, mouseY, partialTicks);
-        this.renderTooltip(graphics, mouseX, mouseY);
-    }
 
     @Override
-    protected void renderBg(@NotNull GuiGraphics graphics, float partialTicks, int x, int y) {
+    public void extractBackground(@NotNull GuiGraphicsExtractor graphics, int x, int y, float partialTicks) {
         int guiLeft = this.leftPos;
         int guiTop = this.topPos;
 
-        graphics.blit(getBackGroundTexture(), guiLeft, guiTop, 0, 0, this.imageWidth, this.imageHeight);
+        blit(graphics, getBackGroundTexture(), guiLeft, guiTop, 0, 0, this.imageWidth, this.imageHeight);
 
         if (this.menu.getCurrentGroup() == null)
         {
@@ -109,11 +106,11 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
         if (this.menu.getCurrentGroup() != null)
         {
             int sliderOffset1 = (int) (5.0F * this.recipeSliderProgress);
-            graphics.blit(getBackGroundTexture(), guiLeft + CUTTER_SLIDER_X, guiTop + CUTTER_SLIDER_Y + CUTTER_RECIPE_SPACING + sliderOffset1, 0 + (this.canScrollRecipes() ? CUTTER_SLIDER_U_ENABLED : CUTTER_SLIDER_U_DISABLED), CUTTER_SLIDER_V, CUTTER_SLIDER_W, CUTTER_SLIDER_H);
+            blit(graphics, getBackGroundTexture(), guiLeft + CUTTER_SLIDER_X, guiTop + CUTTER_SLIDER_Y + CUTTER_RECIPE_SPACING + sliderOffset1, 0 + (this.canScrollRecipes() ? CUTTER_SLIDER_U_ENABLED : CUTTER_SLIDER_U_DISABLED), CUTTER_SLIDER_V, CUTTER_SLIDER_W, CUTTER_SLIDER_H);
         }
 
         int sliderOffset2 = (int)(5.0F * this.typeSliderProgress);
-        graphics.blit(getBackGroundTexture(), guiLeft + CUTTER_SLIDER_X, guiTop + CUTTER_SLIDER_Y + sliderOffset2, 0 + (this.canScrollTypes() ? CUTTER_SLIDER_U_ENABLED : CUTTER_SLIDER_U_DISABLED), CUTTER_SLIDER_V, CUTTER_SLIDER_W, CUTTER_SLIDER_H);
+        blit(graphics, getBackGroundTexture(), guiLeft + CUTTER_SLIDER_X, guiTop + CUTTER_SLIDER_Y + sliderOffset2, 0 + (this.canScrollTypes() ? CUTTER_SLIDER_U_ENABLED : CUTTER_SLIDER_U_DISABLED), CUTTER_SLIDER_V, CUTTER_SLIDER_W, CUTTER_SLIDER_H);
 
         int recipeAreaLeft = this.leftPos + CUTTER_RECIPE_X;
         int recipeAreaTop = this.topPos + CUTTER_RECIPE_Y;
@@ -130,8 +127,8 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
     }
 
     @Override
-    protected void renderTooltip(@NotNull GuiGraphics graphics, int x, int y) {
-        super.renderTooltip(graphics, x, y);
+    protected void extractTooltip(@NotNull GuiGraphicsExtractor graphics, int x, int y) {
+        super.extractTooltip(graphics, x, y);
         {
             int i = this.leftPos + CUTTER_RECIPE_X;
             int j = this.topPos + CUTTER_RECIPE_Y;
@@ -144,7 +141,7 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                 int k1 = j + i1 / 10 * CUTTER_RECIPE_H + 2;
                 if (x >= j1 && x < j1 + CUTTER_RECIPE_W && y >= k1 && y < k1 + CUTTER_RECIPE_H)
                 {
-                    graphics.renderTooltip(this.font, Component.translatable("cuttergroup." + list.get(l).getNamespace() + "." + list.get(l).getPath()), x, y);
+                    graphics.setTooltipForNextFrame(this.font, Component.translatable("cuttergroup." + list.get(l).getNamespace() + "." + list.get(l).getPath()), x, y);
                 }
             }
         }
@@ -172,21 +169,21 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                     {
                         stack = list.get(l);
                     }
-                    graphics.renderTooltip(this.font, stack, x, y);
+                    graphics.setTooltipForNextFrame(this.font, stack, x, y);
                 }
             }
         }
     }
 
     @Override
-    protected void renderLabels(GuiGraphics p_281635_, int p_282681_, int p_283686_) {
-        p_281635_.drawString(this.font, Component.translatable(Constants.MOD_ID + ".group"), 7, 22, 4210752, false);
-        p_281635_.drawString(this.font, Component.translatable(Constants.MOD_ID + ".variant"), 7, 45, 4210752, false);
-        p_281635_.drawString(this.font, this.title, this.titleLabelX + 70, this.titleLabelY, 4210752, false);
-        p_281635_.drawString(this.font, this.playerInventoryTitle, this.inventoryLabelX + 32, this.inventoryLabelY  + 36, 4210752, false);
+    protected void extractLabels(GuiGraphicsExtractor p_281635_, int p_282681_, int p_283686_) {
+        p_281635_.text(this.font, Component.translatable(Constants.MOD_ID + ".group"), 7, 22, 0xFF404040, false);
+        p_281635_.text(this.font, Component.translatable(Constants.MOD_ID + ".variant"), 7, 45, 0xFF404040, false);
+        p_281635_.text(this.font, this.title, this.titleLabelX + 70, this.titleLabelY, 0xFF404040, false);
+        p_281635_.text(this.font, this.playerInventoryTitle, this.inventoryLabelX + 32, this.inventoryLabelY  + 36, 0xFF404040, false);
     }
 
-    private void drawRecipeButtonBackgrounds(GuiGraphics graphics, int x, int y, int recipeAreaLeft, int recipeAreaTop) {
+    private void drawRecipeButtonBackgrounds(GuiGraphicsExtractor graphics, int x, int y, int recipeAreaLeft, int recipeAreaTop) {
 
         final List<Identifier> groups = new ArrayList<>(ModBlocks.getInstance().getOrComputeItemGroups().keySet());
         for(int i = this.typeIndexOffset; i < this.typeIndexOffset + 10 && i < groups.size(); ++i) {
@@ -201,7 +198,7 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                 zOffset = CUTTER_RECIPE_U_HOVERED;
             }
 
-            graphics.blit(BACKGROUND_TEXTURE1, drawLeft, drawTop - 1, zOffset, CUTTER_RECIPE_V, CUTTER_RECIPE_W, CUTTER_RECIPE_H);
+            blit(graphics, BACKGROUND_TEXTURE1, drawLeft, drawTop - 1, zOffset, CUTTER_RECIPE_V, CUTTER_RECIPE_W, CUTTER_RECIPE_H);
         }
 
         if (this.menu.getCurrentGroup() != null)
@@ -220,12 +217,12 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                     zOffset = CUTTER_RECIPE_U_HOVERED;
                 }
 
-                graphics.blit(BACKGROUND_TEXTURE1, drawLeft, drawTop - 1, zOffset, CUTTER_RECIPE_V, CUTTER_RECIPE_W, CUTTER_RECIPE_H);
+                blit(graphics, BACKGROUND_TEXTURE1, drawLeft, drawTop - 1, zOffset, CUTTER_RECIPE_V, CUTTER_RECIPE_W, CUTTER_RECIPE_H);
             }
         }
     }
 
-    private void drawSlotBackgrounds(GuiGraphics graphics)
+    private void drawSlotBackgrounds(GuiGraphicsExtractor graphics)
     {
         if (this.menu.getCurrentVariant() != null && this.menu.getCurrentVariant().getItem() instanceof BlockItem item && item.getBlock() instanceof IMateriallyTexturedBlock block)
         {
@@ -242,14 +239,14 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                 int drawTop = this.topPos + CUTTER_INPUT_Y - 1 + i * CUTTER_INPUT_SPACING;
                 if (i < input.size())
                 {
-                    graphics.drawString(this.font, Component.translatable(input.get(i).getNamespace() + ".desc." + input.get(i).getPath(), Component.translatable(Constants.MOD_ID + ".desc.material", "")), drawLeft - 88, drawTop + 5, 4210752, false);
+                    graphics.text(this.font, Component.translatable(input.get(i).getNamespace() + ".desc." + input.get(i).getPath(), Component.translatable(Constants.MOD_ID + ".desc.material", "")), drawLeft - 88, drawTop + 5, 0xFF404040, false);
                 }
-                graphics.blit(BACKGROUND_TEXTURE1, drawLeft, drawTop, CUTTER_SLOT_U + (i >= numComponents ? CUTTER_SLOT_W : 0), CUTTER_SLOT_V, CUTTER_SLOT_W, CUTTER_SLOT_H);
+                blit(graphics, BACKGROUND_TEXTURE1, drawLeft, drawTop, CUTTER_SLOT_U + (i >= numComponents ? CUTTER_SLOT_W : 0), CUTTER_SLOT_V, CUTTER_SLOT_W, CUTTER_SLOT_H);
             }
         }
     }
 
-    private void drawRecipesItems(final @NotNull GuiGraphics graphics, int left, int top) {
+    private void drawRecipesItems(final @NotNull GuiGraphicsExtractor graphics, int left, int top) {
 
         final List<Identifier> typeList = new ArrayList<>(ModBlocks.getInstance().getOrComputeItemGroups().keySet());
         for(int i = this.typeIndexOffset; i < this.typeIndexOffset + 10 && i < typeList.size(); ++i) {
@@ -265,7 +262,7 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                 continue;
             }
 
-            graphics.renderItem(ModBlocks.getInstance().getOrComputeItemGroups().get(typeList.get(i)).get(0), k, i1);
+            graphics.fakeItem(ModBlocks.getInstance().getOrComputeItemGroups().get(typeList.get(i)).get(0), k, i1);
         }
 
         if (this.menu.getCurrentGroup() != null)
@@ -282,11 +279,11 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
                 {
                     final ItemStack input = list.get(i).copy();
                     texturizeVariantUsingCurrentInput(input);
-                    graphics.renderItem(input, k, i1);
+                    graphics.fakeItem(input, k, i1);
                 }
                 else
                 {
-                    graphics.renderItem(list.get(i), k, i1);
+                    graphics.fakeItem(list.get(i), k, i1);
                 }
             }
         }
@@ -313,7 +310,13 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
     }
 
     @Override
-    public boolean mouseClicked(double mouseX, double mouseY, int button) {
+    public boolean mouseClicked(
+        final MouseButtonEvent event,
+        final boolean doubleClick)
+    {
+        final double mouseX = event.x();
+        final double mouseY = event.y();
+        final int button = event.button();
         this.clickedOnRecipeScroll = false;
         this.clickedOnTypeScroll = false;
 
@@ -366,11 +369,18 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
             }
         }
 
-        return super.mouseClicked(mouseX, mouseY, button);
+        return super.mouseClicked(event, doubleClick);
     }
 
     @Override
-    public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
+    public boolean mouseDragged(
+        final MouseButtonEvent event,
+        final double dragX,
+        final double dragY)
+    {
+        final double mouseX = event.x();
+        final double mouseY = event.y();
+        final int button = event.button();
         if (this.clickedOnRecipeScroll && this.canScrollRecipes()) {
             int i = this.topPos + CUTTER_RECIPE_Y + CUTTER_RECIPE_SPACING;
             int j = i + 10;
@@ -387,7 +397,7 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
             this.typeIndexOffset = (int)((double)(this.typeSliderProgress * (float)this.getHiddenTypeRows()) + 0.5D) * 10;
             return true;
         } else {
-            return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
+            return super.mouseDragged(event, dragX, dragY);
         }
     }
 
@@ -436,4 +446,28 @@ public class ArchitectsCutterScreen extends AbstractContainerScreen<ArchitectsCu
     protected int getHiddenTypeRows() {
         return (ModBlocks.getInstance().getOrComputeItemGroups().size() + 10 - 1) / 10 - 1;
     }
+    private static void blit(
+        final GuiGraphicsExtractor graphics,
+        final Identifier texture,
+        final int x,
+        final int y,
+        final float u,
+        final float v,
+        final int width,
+        final int height)
+    {
+        graphics.blit(
+            RenderPipelines.GUI_TEXTURED,
+            texture,
+            x,
+            y,
+            u,
+            v,
+            width,
+            height,
+            256,
+            256
+        );
+    }
+
 }

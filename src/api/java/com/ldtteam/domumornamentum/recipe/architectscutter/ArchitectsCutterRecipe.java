@@ -23,6 +23,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.PlacementInfo;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeBookCategory;
+import net.minecraft.world.item.crafting.RecipeBookCategories;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -153,7 +154,6 @@ public class ArchitectsCutterRecipe implements Recipe<ArchitectsCutterRecipeInpu
         return "";
     }
 
-    @Override
     public @NotNull ItemStack getResultItem(final HolderLookup.Provider provider)
     {
         final Block generatedBlock = getBlock();
@@ -179,16 +179,26 @@ public class ArchitectsCutterRecipe implements Recipe<ArchitectsCutterRecipeInpu
         return ModRecipeTypes.ARCHITECTS_CUTTER.get();
     }
 
+    /**
+     * The valid inputs depend on the target block's texturable components (resolved at match-time via tags), not on
+     * a fixed ingredient list, so this recipe is not placeable through the vanilla recipe-book grid-fill feature.
+     */
+    @Override
+    public boolean isSpecial()
+    {
+        return true;
+    }
+
     @Override
     public PlacementInfo placementInfo()
     {
-        return null;
+        return PlacementInfo.NOT_PLACEABLE;
     }
 
     @Override
     public RecipeBookCategory recipeBookCategory()
     {
-        return null;
+        return RecipeBookCategories.CRAFTING_MISC;
     }
 
     public @NotNull DataComponentPatch getComponentPatch()

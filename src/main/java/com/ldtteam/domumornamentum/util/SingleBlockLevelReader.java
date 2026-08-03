@@ -1,7 +1,8 @@
 package com.ldtteam.domumornamentum.util;
 
+
+import net.minecraft.world.attribute.EnvironmentAttributeReader;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.entity.Entity;
@@ -154,16 +155,7 @@ public class SingleBlockLevelReader extends SingleBlockBlockReader implements Le
         return this.reader.enabledFeatures();
     }
 
-    @Override
-    public float getShade(@NotNull final Direction p_230487_1_, final boolean p_230487_2_)
-    {
-        if (this.reader == null)
-            return 0;
-
-        return this.reader.getShade(p_230487_1_, p_230487_2_);
-    }
-
-    @NotNull
+@NotNull
     @Override
     public LevelLightEngine getLightEngine()
     {
@@ -229,4 +221,18 @@ public class SingleBlockLevelReader extends SingleBlockBlockReader implements Le
     {
         return this.getBlockState(pos).getFluidState();
     }
+    @NotNull
+    @Override
+    public EnvironmentAttributeReader environmentAttributes()
+    {
+        if (this.reader == null)
+        {
+            throw new IllegalStateException(
+                "No reader available."
+            );
+        }
+
+        return this.reader.environmentAttributes();
+    }
+
 }

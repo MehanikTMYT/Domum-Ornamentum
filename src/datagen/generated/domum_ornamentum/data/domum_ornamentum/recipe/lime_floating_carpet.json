@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "floating_carpets",
   "ingredients": [
-    {
-      "item": "minecraft:lime_wool"
-    },
-    {
-      "item": "minecraft:lime_wool"
-    },
-    {
-      "tag": "c:strings"
-    }
+    "minecraft:lime_wool",
+    "minecraft:lime_wool",
+    "#c:strings"
   ],
   "result": {
     "count": 3,

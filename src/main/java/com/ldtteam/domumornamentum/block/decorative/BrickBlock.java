@@ -28,9 +28,9 @@ public class BrickBlock extends AbstractBlock<BrickBlock>
     /**
      * Constructor of the FullBlock.
      */
-    public BrickBlock(final BrickType type)
+    public BrickBlock(final BrickType type, final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.WOOD).sound(SoundType.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
+        super(properties.mapColor(MapColor.WOOD).sound(SoundType.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
         this.type = type;
     }
 

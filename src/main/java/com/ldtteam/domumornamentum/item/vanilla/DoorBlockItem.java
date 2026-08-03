@@ -1,5 +1,11 @@
 package com.ldtteam.domumornamentum.item.vanilla;
 
+
+
+
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.Item.TooltipContext;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent;
 import com.ldtteam.domumornamentum.block.types.DoorType;
 import com.ldtteam.domumornamentum.block.vanilla.DoorBlock;
@@ -16,8 +22,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 public class DoorBlockItem extends DoubleHighBlockItemWithClientBePlacement implements IDoItem
 {
@@ -42,15 +46,20 @@ public class DoorBlockItem extends DoubleHighBlockItemWithClientBePlacement impl
     }
 
     @Override
-    public void appendHoverText(@NotNull final ItemStack stack, final TooltipContext tooltipContext, @NotNull final List<Component> tooltip, @NotNull final TooltipFlag flagIn)
+    public void appendHoverText(
+      final ItemStack stack,
+      final TooltipContext tooltipContext,
+      final TooltipDisplay tooltipDisplay,
+      final Consumer<Component> tooltip,
+      final TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, tooltipContext, tooltip, flagIn);
+        super.appendHoverText(stack, tooltipContext, tooltipDisplay, tooltip, flagIn);
 
         final DoorType doorType = BlockUtils.getPropertyFromBlockStateTag(stack, DoorBlock.TYPE, DoorType.FULL);
 
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
-        tooltip.add(Component.literal(""));
-        tooltip.add(Component.translatable(
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
+        tooltip.accept(Component.literal(""));
+        tooltip.accept(Component.translatable(
           Constants.MOD_ID + ".door.type.format",
           Component.translatable(
             Constants.MOD_ID + ".door.type.name." + doorType.getTranslationKeySuffix()
@@ -64,7 +73,7 @@ public class DoorBlockItem extends DoubleHighBlockItemWithClientBePlacement impl
 
         final IMateriallyTexturedBlockComponent doorComponent = doorBlock.getComponents().get(0);
         final Block doorBlock = textureData.getTexturedComponents().getOrDefault(doorComponent.getId(), doorComponent.getDefault());
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(doorBlock))));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(doorBlock))));
     }
 
     @Override

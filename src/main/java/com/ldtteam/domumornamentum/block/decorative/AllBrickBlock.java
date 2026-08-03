@@ -56,9 +56,9 @@ public class AllBrickBlock extends AbstractBlock<AllBrickBlock> implements IMate
     /**
      * base constructor
      */
-    public AllBrickBlock()
+    public AllBrickBlock(final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
+        super(properties.mapColor(MapColor.STONE).strength(BLOCK_HARDNESS, RESISTANCE));
     }
 
     @Override
@@ -80,7 +80,7 @@ public class AllBrickBlock extends AbstractBlock<AllBrickBlock> implements IMate
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

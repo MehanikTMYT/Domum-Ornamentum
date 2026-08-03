@@ -1,5 +1,11 @@
 package com.ldtteam.domumornamentum.item.decoration;
 
+
+
+
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.Item.TooltipContext;
 import com.google.common.collect.ImmutableList;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent;
 import com.ldtteam.domumornamentum.block.decorative.DynamicTimberFrameBlock;
@@ -40,28 +46,33 @@ public class DynamicTimberFrameBlockItem extends BlockItemWithClientBePlacement 
     }
 
     @Override
-    public void appendHoverText(final ItemStack stack, final TooltipContext tooltipContext, final List<Component> tooltip, final TooltipFlag flagIn)
+    public void appendHoverText(
+      final ItemStack stack,
+      final TooltipContext tooltipContext,
+      final TooltipDisplay tooltipDisplay,
+      final Consumer<Component> tooltip,
+      final TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, tooltipContext, tooltip, flagIn);
+        super.appendHoverText(stack, tooltipContext, tooltipDisplay, tooltip, flagIn);
 
         MaterialTextureData textureData = MaterialTextureData.readFromItemStack(stack);
         if (textureData.isEmpty()) {
             textureData = MaterialTextureDataUtil.generateRandomTextureDataFrom(stack);
         }
 
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
-        tooltip.add(Component.literal(""));
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".timber.frame.header"));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
+        tooltip.accept(Component.literal(""));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".timber.frame.header"));
 
         final IMateriallyTexturedBlockComponent frameComponent = timberFrameBlock.getComponents().get(0);
         final Block frameBlock = textureData.getTexturedComponents().getOrDefault(frameComponent.getId(), frameComponent.getDefault());
         final Component frameBlockName = BlockUtils.getHoverName(frameBlock);
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".desc.frame", Component.translatable(Constants.MOD_ID + ".desc.material", frameBlockName)));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.frame", Component.translatable(Constants.MOD_ID + ".desc.material", frameBlockName)));
 
         final IMateriallyTexturedBlockComponent centerComponent = timberFrameBlock.getComponents().get(1);
         final Block centerBlock = textureData.getTexturedComponents().getOrDefault(centerComponent.getId(), centerComponent.getDefault());
         final Component centerBlockName = BlockUtils.getHoverName(centerBlock);
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".desc.center", Component.translatable(Constants.MOD_ID + ".desc.material", centerBlockName)));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.center", Component.translatable(Constants.MOD_ID + ".desc.material", centerBlockName)));
     }
 
     @Override

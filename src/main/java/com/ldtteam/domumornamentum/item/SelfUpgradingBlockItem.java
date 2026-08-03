@@ -1,9 +1,13 @@
 package com.ldtteam.domumornamentum.item;
 
+
+
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.item.component.TypedEntityData;
 import com.ldtteam.domumornamentum.DomumOrnamentum;
 import com.ldtteam.domumornamentum.client.model.data.MaterialTextureData;
 import com.mojang.serialization.DynamicOps;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
@@ -30,10 +34,10 @@ public class SelfUpgradingBlockItem extends BlockItem
         super(block, properties);
     }
 
-    @Override
-    public void verifyComponentsAfterLoad(final ItemStack itemStack)
+    // PORT-26.1: explicit legacy-data migration helper.
+    public void upgradeLegacyComponents(final ItemStack itemStack)
     {
-        super.verifyComponentsAfterLoad(itemStack);
+
         upgrade(itemStack);
     }
 
@@ -50,21 +54,30 @@ public class SelfUpgradingBlockItem extends BlockItem
 
         CustomData.update(DataComponents.CUSTOM_DATA, itemStack, oldData -> {
             // move Type from root to BlockStateTag
-            if (oldData.contains(TYPE_BLOCK_PROPERTY, Tag.TAG_STRING))
+            if (oldData.getString(TYPE_BLOCK_PROPERTY).isPresent())
             {
-                itemStack.update(DataComponents.BLOCK_STATE, BlockItemStateProperties.EMPTY, props -> with(props, TYPE_BLOCK_PROPERTY, oldData.getString(TYPE_BLOCK_PROPERTY)));
+                itemStack.update(DataComponents.BLOCK_STATE, BlockItemStateProperties.EMPTY, props -> with(props, TYPE_BLOCK_PROPERTY, oldData.getString(TYPE_BLOCK_PROPERTY).orElseThrow()));
                 oldData.remove(TYPE_BLOCK_PROPERTY);
             }
 
             // move TextureData from root to BlockEntityTag
-            if (oldData.contains(BLOCK_ENTITY_TEXTURE_DATA, Tag.TAG_COMPOUND))
+            if (oldData.getCompound(BLOCK_ENTITY_TEXTURE_DATA).isPresent())
             {
-                saveTextureDataFromNbt(itemStack, dynamicops, oldData.getCompound(BLOCK_ENTITY_TEXTURE_DATA));
+                saveTextureDataFromNbt(itemStack, dynamicops, oldData.getCompound(BLOCK_ENTITY_TEXTURE_DATA).orElseThrow());
                 oldData.remove(BLOCK_ENTITY_TEXTURE_DATA);
             }
         });
 
-        final CompoundTag tag = itemStack.getOrDefault(DataComponents.BLOCK_ENTITY_DATA, CustomData.EMPTY).getUnsafe().getCompound(BLOCK_ENTITY_TEXTURE_DATA);
+        final TypedEntityData<BlockEntityType<?>> blockEntityData =
+          itemStack.get(DataComponents.BLOCK_ENTITY_DATA);
+
+        final CompoundTag tag =
+          blockEntityData == null
+            ? new CompoundTag()
+            : blockEntityData
+                .copyTagWithoutId()
+                .getCompound(BLOCK_ENTITY_TEXTURE_DATA)
+                .orElseGet(CompoundTag::new);
         if (!tag.isEmpty())
         {
             saveTextureDataFromNbt(itemStack, dynamicops, tag);

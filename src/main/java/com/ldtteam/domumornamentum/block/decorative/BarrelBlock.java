@@ -1,18 +1,25 @@
 package com.ldtteam.domumornamentum.block.decorative;
 
+
+
+
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.LevelReader;
 import com.ldtteam.domumornamentum.block.AbstractBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
@@ -35,9 +42,9 @@ public class BarrelBlock extends AbstractBlock<BarrelBlock> implements SimpleWat
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public BarrelBlock()
+    public BarrelBlock(final Properties properties)
     {
-        super(AbstractBlock.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).strength(3f, 1f));
+        super(properties.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).ignitedByLava().strength(3f, 1f));
         this.registerDefaultState(this.getStateDefinition().any().setValue(WATERLOGGED, false));
     }
 
@@ -79,11 +86,19 @@ public class BarrelBlock extends AbstractBlock<BarrelBlock> implements SimpleWat
     }
 
     @Override
-    public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor worldIn, BlockPos currentPos, BlockPos facingPos)
+    public BlockState updateShape(
+        final BlockState stateIn,
+        final LevelReader worldIn,
+        final ScheduledTickAccess tickAccess,
+        final BlockPos currentPos,
+        final Direction facing,
+        final BlockPos facingPos,
+        final BlockState facingState,
+        final RandomSource randomSource)
     {
         if (stateIn.getValue(WATERLOGGED))
         {
-            worldIn.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            tickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
         }
 
         return stateIn;

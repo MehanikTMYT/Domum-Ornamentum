@@ -1,0 +1,12 @@
+Russian localization for Domum Ornamentum.
+
+Based in part on the Translation DO resource pack:
+https://modrinth.com/resourcepack/translation-do
+
+Imported version: 1.0
+Imported file: DO-russian.zip
+Source project license: MIT
+
+The imported localization was merged against the current
+Minecraft 26.1 en_us language keys and manually adjusted
+for the Domum Ornamentum 26.1 port.

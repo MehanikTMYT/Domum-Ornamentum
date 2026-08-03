@@ -58,9 +58,9 @@ public class PaperWallBlock extends AbstractBlockPane<PaperWallBlock> implements
      */
     private static final float RESISTANCE = 1F;
 
-    public PaperWallBlock()
+    public PaperWallBlock(final Properties properties)
     {
-        super(Properties.of().mapColor(MapColor.NONE).isRedstoneConductor((state, getter, pos) -> false).strength(BLOCK_HARDNESS, RESISTANCE));
+        super(properties.mapColor(MapColor.NONE).isRedstoneConductor((state, getter, pos) -> false).strength(BLOCK_HARDNESS, RESISTANCE));
     }
 
     @Override
@@ -88,7 +88,7 @@ public class PaperWallBlock extends AbstractBlockPane<PaperWallBlock> implements
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

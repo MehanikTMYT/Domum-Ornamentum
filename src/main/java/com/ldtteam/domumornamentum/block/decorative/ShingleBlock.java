@@ -62,9 +62,9 @@ public class ShingleBlock extends AbstractBlockStairs<ShingleBlock> implements I
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
-    public ShingleBlock()
+    public ShingleBlock(final Properties properties)
     {
-        super(Blocks.OAK_PLANKS::defaultBlockState, Properties.of().mapColor(MapColor.WOOD).strength(BLOCK_HARDNESS, RESISTANCE).noOcclusion());
+        super(Blocks.OAK_PLANKS::defaultBlockState, properties.mapColor(MapColor.WOOD).strength(BLOCK_HARDNESS, RESISTANCE).noOcclusion());
     }
 
     /**
@@ -119,7 +119,7 @@ public class ShingleBlock extends AbstractBlockStairs<ShingleBlock> implements I
         fillItemGroupCache.clear();
     }
 
-    @Override
+    // PORT-26.1: legacy compatibility method; new hook signature pending.
     public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
     {
         return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess());

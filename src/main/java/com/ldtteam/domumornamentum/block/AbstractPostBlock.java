@@ -1,5 +1,11 @@
 package com.ldtteam.domumornamentum.block;
 
+
+
+
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.LevelReader;
 import com.ldtteam.domumornamentum.block.interfaces.IDOBlock;
 import com.ldtteam.domumornamentum.block.types.PostType;
 import com.ldtteam.domumornamentum.util.Constants;
@@ -8,7 +14,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Rotation;
@@ -219,18 +224,20 @@ public abstract class AbstractPostBlock<B extends AbstractPostBlock<B>> extends 
     @NotNull
     @Override
     public BlockState updateShape(
-            BlockState state,
-            @NotNull Direction direction,
-            @NotNull BlockState stateOut,
-            @NotNull LevelAccessor level,
-            @NotNull BlockPos pos,
-            @NotNull BlockPos pos2)
+        final BlockState state,
+        final LevelReader level,
+        final ScheduledTickAccess tickAccess,
+        final BlockPos pos,
+        final Direction direction,
+        final BlockPos pos2,
+        final BlockState stateOut,
+        final RandomSource randomSource)
     {
         if (state.getValue(WATERLOGGED))
         {
-            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+            tickAccess.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
 
-        return super.updateShape(state, direction, stateOut, level, pos, pos2);
+        return super.updateShape(state, level, tickAccess, pos, direction, pos2, stateOut, randomSource);
     }
 }

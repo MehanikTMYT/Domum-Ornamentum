@@ -20,11 +20,13 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -80,59 +82,59 @@ public final class ModBlocks implements IModBlocks {
         ARCHITECTS_CUTTER = registerSimpleBlockItem("architectscutter", ArchitectsCutterBlock::new);
 
         for (final TimberFrameType blockType : TimberFrameType.values()) {
-            TIMBER_FRAMES.add(registerCustomBlockItem(blockType.getName(), () -> new TimberFrameBlock(blockType), b -> new TimberFrameBlockItem(b, new Item.Properties())));
+            TIMBER_FRAMES.add(registerCustomBlockItem(blockType.getName(), properties -> new TimberFrameBlock(blockType, properties), (b, props) -> new TimberFrameBlockItem(b, props)));
         }
-        DYNAMIC_TIMBER_FRAME = registerCustomBlockItem("dynamic_timberframe", () -> new DynamicTimberFrameBlock(), b -> new DynamicTimberFrameBlockItem(b, new Item.Properties()));
+        DYNAMIC_TIMBER_FRAME = registerCustomBlockItem("dynamic_timberframe", DynamicTimberFrameBlock::new, (b, props) -> new DynamicTimberFrameBlockItem(b, props));
 
-        SHINGLE = registerCustomBlockItem("shingle", ShingleBlock::new, b -> new ShingleBlockItem(b, new Item.Properties()));
-        SHINGLE_FLAT = registerCustomBlockItem("shingle_flat", ShingleBlock::new, b -> new ShingleBlockItem(b, new Item.Properties()));
-        SHINGLE_FLAT_LOWER = registerCustomBlockItem("shingle_flat_lower", ShingleBlock::new, b -> new ShingleBlockItem(b, new Item.Properties()));
+        SHINGLE = registerCustomBlockItem("shingle", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
+        SHINGLE_FLAT = registerCustomBlockItem("shingle_flat", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
+        SHINGLE_FLAT_LOWER = registerCustomBlockItem("shingle_flat_lower", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
 
-        SHINGLE_SLAB = registerCustomBlockItem("shingle_slab", ShingleSlabBlock::new, b -> new ShingleSlabBlockItem(b, new Item.Properties()));
-        PAPER_WALL = registerCustomBlockItem("blockpaperwall", PaperWallBlock::new, b -> new PaperwallBlockItem(b, new Item.Properties()));
-        TILED_PAPER_WALL = registerCustomBlockItem("blocktiledpaperwall", PaperWallBlock::new, b -> new PaperwallBlockItem(b, new Item.Properties()));
+        SHINGLE_SLAB = registerCustomBlockItem("shingle_slab", ShingleSlabBlock::new, (b, props) -> new ShingleSlabBlockItem(b, props));
+        PAPER_WALL = registerCustomBlockItem("blockpaperwall", PaperWallBlock::new, (b, props) -> new PaperwallBlockItem(b, props));
+        TILED_PAPER_WALL = registerCustomBlockItem("blocktiledpaperwall", PaperWallBlock::new, (b, props) -> new PaperwallBlockItem(b, props));
 
-        PILLARS.add(registerCustomBlockItem("blockpillar", PillarBlock::new, b -> new PillarBlockItem(b, new Item.Properties())));
-        PILLARS.add(registerCustomBlockItem("blockypillar", PillarBlock::new, b -> new PillarBlockItem(b, new Item.Properties())));
-        PILLARS.add(registerCustomBlockItem("squarepillar", PillarBlock::new, b -> new PillarBlockItem(b, new Item.Properties())));
+        PILLARS.add(registerCustomBlockItem("blockpillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
+        PILLARS.add(registerCustomBlockItem("blockypillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
+        PILLARS.add(registerCustomBlockItem("squarepillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
 
         for (final ExtraBlockType blockType : ExtraBlockType.values()) {
-            EXTRA_TOP_BLOCKS.add(registerCustomBlockItem(blockType.getSerializedName(), () -> new ExtraBlock(blockType), b -> new ExtraBlockItem(b, new Item.Properties())));
+            EXTRA_TOP_BLOCKS.add(registerCustomBlockItem(blockType.getSerializedName(), properties -> new ExtraBlock(blockType, properties), (b, props) -> new ExtraBlockItem(b, props)));
         }
 
         for (final FramedLightType blockType : FramedLightType.values())
         {
-            FRAMED_LIGHT.add(registerCustomBlockItem(blockType.getName(), () -> new FramedLightBlock(blockType), b -> new FramedLightBlockItem(b, new Item.Properties())));
+            FRAMED_LIGHT.add(registerCustomBlockItem(blockType.getName(), properties -> new FramedLightBlock(blockType, properties), (b, props) -> new FramedLightBlockItem(b, props)));
         }
 
         for (final DyeColor color : DyeColor.values()) {
-            FLOATING_CARPETS.add(registerSimpleBlockItem(color.getName().toLowerCase(Locale.ROOT) + "_floating_carpet", () -> new FloatingCarpetBlock(color)));
+            FLOATING_CARPETS.add(registerSimpleBlockItem(color.getName().toLowerCase(Locale.ROOT) + "_floating_carpet", properties -> new FloatingCarpetBlock(color, properties)));
         }
 
         for (final BrickType type : BrickType.values()) {
-            BRICK.add(registerSimpleBlockItem(type.getSerializedName(), () -> new BrickBlock(type)));
+            BRICK.add(registerSimpleBlockItem(type.getSerializedName(), properties -> new BrickBlock(type, properties)));
         }
 
         STANDING_BARREL = registerSimpleBlockItem("blockbarreldeco_standing", BarrelBlock::new);
         LAYING_BARREL = registerSimpleBlockItem("blockbarreldeco_onside", BarrelBlock::new);
 
-        FENCE = registerCustomBlockItem("vanilla_fence_compat", FenceBlock::new, b -> new FenceBlockItem(b, new Item.Properties()));
-        FENCE_GATE = registerCustomBlockItem("vanilla_fence_gate_compat", FenceGateBlock::new, b -> new FenceGateBlockItem(b, new Item.Properties()));
-        SLAB = registerCustomBlockItem("vanilla_slab_compat", SlabBlock::new, b -> new SlabBlockItem(b, new Item.Properties()));
-        WALL = registerCustomBlockItem("vanilla_wall_compat", WallBlock::new, b -> new WallBlockItem(b, new Item.Properties()));
-        STAIR = registerCustomBlockItem("vanilla_stairs_compat", StairBlock::new, b -> new StairsBlockItem(b, new Item.Properties()));
-        TRAPDOOR = registerCustomBlockItem("vanilla_trapdoors_compat", TrapdoorBlock::new, b -> new TrapdoorBlockItem(b, new Item.Properties()));
-        DOOR = registerCustomBlockItem("vanilla_doors_compat", DoorBlock::new, b -> new DoorBlockItem(b, new Item.Properties()));
-        PANEL = registerCustomBlockItem("panel", PanelBlock::new, b -> new PanelBlockItem(b, new Item.Properties()));
-        ALL_BRICK.add(registerCustomBlockItem("light_brick", AllBrickBlock::new, b -> new AllBrickBlockItem(b, new Item.Properties())));
-        ALL_BRICK.add(registerCustomBlockItem("dark_brick", AllBrickBlock::new, b -> new AllBrickBlockItem(b, new Item.Properties())));
-        ALL_BRICK_STAIR.add(registerCustomBlockItem("light_brick_stair", AllBrickStairBlock::new, b -> new AllBrickStairBlockItem(b, new Item.Properties())));
-        ALL_BRICK_STAIR.add(registerCustomBlockItem("dark_brick_stair", AllBrickStairBlock::new, b -> new AllBrickStairBlockItem(b, new Item.Properties())));
+        FENCE = registerCustomBlockItem("vanilla_fence_compat", FenceBlock::new, (b, props) -> new FenceBlockItem(b, props));
+        FENCE_GATE = registerCustomBlockItem("vanilla_fence_gate_compat", FenceGateBlock::new, (b, props) -> new FenceGateBlockItem(b, props));
+        SLAB = registerCustomBlockItem("vanilla_slab_compat", SlabBlock::new, (b, props) -> new SlabBlockItem(b, props));
+        WALL = registerCustomBlockItem("vanilla_wall_compat", WallBlock::new, (b, props) -> new WallBlockItem(b, props));
+        STAIR = registerCustomBlockItem("vanilla_stairs_compat", StairBlock::new, (b, props) -> new StairsBlockItem(b, props));
+        TRAPDOOR = registerCustomBlockItem("vanilla_trapdoors_compat", TrapdoorBlock::new, (b, props) -> new TrapdoorBlockItem(b, props));
+        DOOR = registerCustomBlockItem("vanilla_doors_compat", DoorBlock::new, (b, props) -> new DoorBlockItem(b, props));
+        PANEL = registerCustomBlockItem("panel", PanelBlock::new, (b, props) -> new PanelBlockItem(b, props));
+        ALL_BRICK.add(registerCustomBlockItem("light_brick", AllBrickBlock::new, (b, props) -> new AllBrickBlockItem(b, props)));
+        ALL_BRICK.add(registerCustomBlockItem("dark_brick", AllBrickBlock::new, (b, props) -> new AllBrickBlockItem(b, props)));
+        ALL_BRICK_STAIR.add(registerCustomBlockItem("light_brick_stair", AllBrickStairBlock::new, (b, props) -> new AllBrickStairBlockItem(b, props)));
+        ALL_BRICK_STAIR.add(registerCustomBlockItem("dark_brick_stair", AllBrickStairBlock::new, (b, props) -> new AllBrickStairBlockItem(b, props)));
 
-        POST = registerCustomBlockItem("post", PostBlock::new, b -> new PostBlockItem(b, new Item.Properties()));
+        POST = registerCustomBlockItem("post", PostBlock::new, (b, props) -> new PostBlockItem(b, props));
 
-        FANCY_DOOR = registerCustomBlockItem("fancy_door", FancyDoorBlock::new, b -> new FancyDoorBlockItem(b, new Item.Properties()));
-        FANCY_TRAPDOOR = registerCustomBlockItem("fancy_trapdoors", FancyTrapdoorBlock::new, b -> new FancyTrapdoorBlockItem(b, new Item.Properties()));
+        FANCY_DOOR = registerCustomBlockItem("fancy_door", FancyDoorBlock::new, (b, props) -> new FancyDoorBlockItem(b, props));
+        FANCY_TRAPDOOR = registerCustomBlockItem("fancy_trapdoors", FancyTrapdoorBlock::new, (b, props) -> new FancyTrapdoorBlockItem(b, props));
     }
 
     /**
@@ -153,26 +155,35 @@ public final class ModBlocks implements IModBlocks {
     /**
      * Utility shorthand to register blocks using the deferred registry.
      * Register item block together.
+     * <p>
+     * The block factory receives {@link BlockBehaviour.Properties} that already has its
+     * {@link net.minecraft.resources.ResourceKey} set by {@link DeferredRegister.Blocks#registerBlock}, so custom
+     * block constructors must accept and build upon these properties rather than creating their own from scratch.
      *
      * @param name  the registry name of the block
      * @param block a factory / constructor to create the block on demand
      * @param <B>   the block subclass for the factory response
      * @return the block entry saved to the registry
      */
-    public static <B extends Block> DeferredBlock<B> registerSimpleBlockItem(String name, Supplier<B> block)
+    public static <B extends Block> DeferredBlock<B> registerSimpleBlockItem(String name, Function<BlockBehaviour.Properties, ? extends B> block)
     {
-        final DeferredBlock<B> registered = BLOCKS.register(name, block);
+        final DeferredBlock<B> registered = BLOCKS.registerBlock(name, block);
         ITEMS.registerSimpleBlockItem(registered);
         return registered;
     }
 
-    public static <B extends Block> DeferredBlock<B> registerCustomBlockItem(String name, Supplier<B> block, Function<B, ? extends BlockItem> item)
+    /**
+     * Registers a block together with a custom {@link BlockItem} subclass. Both the block properties and the item
+     * properties passed to the factories already have their ids set, and the item properties additionally have
+     * {@link Item.Properties#useBlockDescriptionPrefix()} applied.
+     */
+    public static <B extends Block> DeferredBlock<B> registerCustomBlockItem(
+        String name,
+        Function<BlockBehaviour.Properties, ? extends B> block,
+        BiFunction<B, Item.Properties, ? extends BlockItem> item)
     {
-        final DeferredBlock<B> registered = BLOCKS.register(name, block);
-
-        // inline of ITEMS.registerSimpleBlockItem(registered);
-        ITEMS.register(registered.unwrapKey().orElseThrow().location().getPath(), key -> item.apply(registered.value()));
-
+        final DeferredBlock<B> registered = BLOCKS.registerBlock(name, block);
+        ITEMS.registerItem(name, props -> item.apply(registered.value(), props), () -> new Item.Properties().useBlockDescriptionPrefix());
         return registered;
     }
 

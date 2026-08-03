@@ -1,5 +1,11 @@
 package com.ldtteam.domumornamentum.item.vanilla;
 
+
+
+
+import java.util.function.Consumer;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.Item.TooltipContext;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent;
 import com.ldtteam.domumornamentum.block.vanilla.SlabBlock;
 import com.ldtteam.domumornamentum.client.model.data.MaterialTextureData;
@@ -15,8 +21,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 public class SlabBlockItem extends BlockItemWithClientBePlacement implements IDoItem
 {
@@ -41,10 +45,15 @@ public class SlabBlockItem extends BlockItemWithClientBePlacement implements IDo
     }
 
     @Override
-    public void appendHoverText(@NotNull final ItemStack stack, final TooltipContext tooltipContext, @NotNull final List<Component> tooltip, @NotNull final TooltipFlag flagIn)
+    public void appendHoverText(
+      final ItemStack stack,
+      final TooltipContext tooltipContext,
+      final TooltipDisplay tooltipDisplay,
+      final Consumer<Component> tooltip,
+      final TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, tooltipContext, tooltip, flagIn);
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
+        super.appendHoverText(stack, tooltipContext, tooltipDisplay, tooltip, flagIn);
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
 
         MaterialTextureData textureData = MaterialTextureData.readFromItemStack(stack);
         if (textureData.isEmpty()) {
@@ -53,7 +62,7 @@ public class SlabBlockItem extends BlockItemWithClientBePlacement implements IDo
 
         final IMateriallyTexturedBlockComponent component = slabBlock.getComponents().get(0);
         final Block block = textureData.getTexturedComponents().getOrDefault(component.getId(), component.getDefault());
-        tooltip.add(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(block))));
+        tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(block))));
     }
 
     @Override
