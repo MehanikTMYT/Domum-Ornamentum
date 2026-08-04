@@ -1,6 +1,118 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "domum_ornamentum:item/vanilla_trapdoors_compat"
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "type",
+    "cases": [
+      {
+        "when": "boss",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/boss"
+        }
+      },
+      {
+        "when": "coffer",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/coffer"
+        }
+      },
+      {
+        "when": "full",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/full"
+        }
+      },
+      {
+        "when": "horizontal_bars",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/horizontal_bars"
+        }
+      },
+      {
+        "when": "horizontally_squiggly_striped",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/horizontally_squiggly_striped"
+        }
+      },
+      {
+        "when": "horizontally_striped",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/horizontally_striped"
+        }
+      },
+      {
+        "when": "moulding",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/moulding"
+        }
+      },
+      {
+        "when": "port_manteau",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/port_manteau"
+        }
+      },
+      {
+        "when": "porthole",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/porthole"
+        }
+      },
+      {
+        "when": "roundel",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/roundel"
+        }
+      },
+      {
+        "when": "slot",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/slot"
+        }
+      },
+      {
+        "when": "vertical_bars",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/vertical_bars"
+        }
+      },
+      {
+        "when": "vertically_squiggly_striped",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/vertically_squiggly_striped"
+        }
+      },
+      {
+        "when": "vertically_striped",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/vertically_striped"
+        }
+      },
+      {
+        "when": "waffle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/waffle"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "domum_ornamentum:item/port26_variants/vanilla_trapdoors_compat/waffle"
+    }
   }
 }

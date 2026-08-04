@@ -97,6 +97,26 @@
     "#c:cobblestones",
     "#c:obsidians",
     "#minecraft:stone_bricks",
-    "#minecraft:base_stone_nether"
+    "#minecraft:base_stone_nether",
+    {
+      "id": "regions_unexplored:prismoss",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:deepslate_prismoss",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:raw_redstone_block",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:peat_mud",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:silt_mud",
+      "required": false
+    }
   ]
 }

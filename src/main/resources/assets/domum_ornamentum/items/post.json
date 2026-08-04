@@ -1,6 +1,55 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "domum_ornamentum:item/post"
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "type",
+    "cases": [
+      {
+        "when": "plain",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/plain"
+        }
+      },
+      {
+        "when": "heavy",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/heavy"
+        }
+      },
+      {
+        "when": "turned",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/turned"
+        }
+      },
+      {
+        "when": "pinched",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/pinched"
+        }
+      },
+      {
+        "when": "double",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/double"
+        }
+      },
+      {
+        "when": "quad",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/post/quad"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "domum_ornamentum:item/port26_variants/post/plain"
+    }
   }
 }

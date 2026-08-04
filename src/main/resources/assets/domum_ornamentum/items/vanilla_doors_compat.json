@@ -1,6 +1,41 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "domum_ornamentum:item/vanilla_doors_compat"
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "type",
+    "cases": [
+      {
+        "when": "full",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_doors_compat/full"
+        }
+      },
+      {
+        "when": "port_manteau",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_doors_compat/port_manteau"
+        }
+      },
+      {
+        "when": "vertically_striped",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_doors_compat/vertically_striped"
+        }
+      },
+      {
+        "when": "waffle",
+        "model": {
+          "type": "minecraft:model",
+          "model": "domum_ornamentum:item/port26_variants/vanilla_doors_compat/waffle"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "domum_ornamentum:item/port26_variants/vanilla_doors_compat/waffle"
+    }
   }
 }
