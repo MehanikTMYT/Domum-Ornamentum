@@ -27,6 +27,8 @@ public class BrickBlock extends AbstractBlock<BrickBlock>
 
     /**
      * Constructor of the FullBlock.
+     * @param type the brick type.
+     * @param properties the block properties.
      */
     public BrickBlock(final BrickType type, final Properties properties)
     {

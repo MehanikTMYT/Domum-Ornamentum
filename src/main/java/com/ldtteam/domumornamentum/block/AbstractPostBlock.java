@@ -1,11 +1,5 @@
 package com.ldtteam.domumornamentum.block;
 
-
-
-
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.ScheduledTickAccess;
-import net.minecraft.world.level.LevelReader;
 import com.ldtteam.domumornamentum.block.interfaces.IDOBlock;
 import com.ldtteam.domumornamentum.block.types.PostType;
 import com.ldtteam.domumornamentum.util.Constants;
@@ -14,6 +8,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Rotation;
@@ -27,8 +23,10 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 /**
  * The abstract class for structurize-added posts.
@@ -208,7 +206,7 @@ public abstract class AbstractPostBlock<B extends AbstractPostBlock<B>> extends 
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.@NonNull Builder<Block, BlockState> builder)
     {
         super.createBlockStateDefinition(builder);
         builder.add(FACING, TYPE, UPRIGHT, WATERLOGGED);
@@ -223,21 +221,21 @@ public abstract class AbstractPostBlock<B extends AbstractPostBlock<B>> extends 
 
     @NotNull
     @Override
-    public BlockState updateShape(
-        final BlockState state,
-        final LevelReader level,
-        final ScheduledTickAccess tickAccess,
-        final BlockPos pos,
-        final Direction direction,
-        final BlockPos pos2,
-        final BlockState stateOut,
-        final RandomSource randomSource)
+    protected BlockState updateShape(
+            final BlockState state,
+            final @NonNull LevelReader levelReader,
+            final @NonNull ScheduledTickAccess scheduledTickAccess,
+            final @NonNull BlockPos pos,
+            final @NonNull Direction direction,
+            final @NonNull BlockPos fromPos,
+            final @NonNull BlockState neighborState,
+            final @NonNull RandomSource randomSource)
     {
         if (state.getValue(WATERLOGGED))
         {
-            tickAccess.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+            scheduledTickAccess.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
         }
 
-        return super.updateShape(state, level, tickAccess, pos, direction, pos2, stateOut, randomSource);
+        return super.updateShape(state, levelReader, scheduledTickAccess, pos, direction, fromPos, neighborState, randomSource);
     }
 }

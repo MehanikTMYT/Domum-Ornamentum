@@ -36,10 +36,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 
@@ -55,14 +55,19 @@ public class PanelBlock extends AbstractPanelBlockTrapdoor<PanelBlock> implement
 
     private final List<ItemStack> fillItemGroupCache = Lists.newArrayList();
 
+    public PanelBlock()
+    {
+        this(Properties.of().mapColor(MapColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn((state, blockGetter, pos, type) -> false));
+    }
+
     public PanelBlock(final Properties props)
     {
-        super(props.mapColor(MapColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn((state, blockGetter, pos, type) -> false));
+        super(props);
         this.registerDefaultState(this.defaultBlockState().setValue(TYPE, TrapdoorType.FULL));
     }
 
     @Override
-    protected MapCodec<PanelBlock> codec()
+    protected @NonNull MapCodec<PanelBlock> codec()
     {
         return CODEC;
     }
@@ -174,20 +179,21 @@ public class PanelBlock extends AbstractPanelBlockTrapdoor<PanelBlock> implement
         return new MateriallyTexturedBlockEntity(blockPos, blockState);
     }
 
-    // PORT-26.1: legacy compatibility method; new hook signature pending.
-    public ItemStack getCloneItemStack(final BlockState state, final HitResult target, final LevelReader world, final BlockPos pos, final Player player)
+    @SuppressWarnings("deprecation")
+    @Override
+    public @NonNull ItemStack getCloneItemStack(final LevelReader level, final @NonNull BlockPos pos, final @NonNull BlockState state, final boolean includeData)
     {
-        return BlockUtils.getMaterializedItemStack(world.getBlockEntity(pos), world.registryAccess(), TYPE);
+        return BlockUtils.getMaterializedItemStack(level.getBlockEntity(pos), level.registryAccess(), TYPE);
     }
 
-    @Override
-    public void resetCache()
+        public void resetCache()
     {
         fillItemGroupCache.clear();
     }
 
-    @Override
-    public void buildRecipes(final RecipeOutput recipeOutput)
+        @Override
+
+        public void buildRecipes(final RecipeOutput recipeOutput)
     {
         for (final TrapdoorType value : TrapdoorType.values())
         {
@@ -198,7 +204,7 @@ public class PanelBlock extends AbstractPanelBlockTrapdoor<PanelBlock> implement
     }
 
     @Override
-    public float getExplosionResistance(BlockState state, BlockGetter level, BlockPos pos, Explosion explosion) {
+    public float getExplosionResistance(@NonNull BlockState state, @NonNull BlockGetter level, @NonNull BlockPos pos, @NonNull Explosion explosion) {
         return getDOExplosionResistance(super::getExplosionResistance, state, level, pos, explosion);
     }
 
@@ -208,7 +214,7 @@ public class PanelBlock extends AbstractPanelBlockTrapdoor<PanelBlock> implement
     }
 
     @Override
-    public SoundType getSoundType(BlockState state, LevelReader level, BlockPos pos, @Nullable Entity entity) {
+    public @NonNull SoundType getSoundType(@NonNull BlockState state, @NonNull LevelReader level, @NonNull BlockPos pos, @Nullable Entity entity) {
         return getDOSoundType(super::getSoundType, state, level, pos, entity);
     }
 

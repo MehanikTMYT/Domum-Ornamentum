@@ -1,27 +1,22 @@
 package com.ldtteam.domumornamentum.block.decorative;
 
-
-
-
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.ScheduledTickAccess;
-import net.minecraft.world.level.LevelReader;
 import com.ldtteam.domumornamentum.block.AbstractBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.util.RandomSource;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -44,7 +39,7 @@ public class BarrelBlock extends AbstractBlock<BarrelBlock> implements SimpleWat
 
     public BarrelBlock(final Properties properties)
     {
-        super(properties.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).ignitedByLava().strength(3f, 1f));
+        super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(WATERLOGGED, false));
     }
 
@@ -86,21 +81,21 @@ public class BarrelBlock extends AbstractBlock<BarrelBlock> implements SimpleWat
     }
 
     @Override
-    public BlockState updateShape(
-        final BlockState stateIn,
-        final LevelReader worldIn,
-        final ScheduledTickAccess tickAccess,
-        final BlockPos currentPos,
-        final Direction facing,
-        final BlockPos facingPos,
-        final BlockState facingState,
-        final RandomSource randomSource)
+    protected BlockState updateShape(
+      final BlockState state,
+      final LevelReader levelReader,
+      final ScheduledTickAccess scheduledTickAccess,
+      final BlockPos pos,
+      final Direction direction,
+      final BlockPos fromPos,
+      final BlockState neighborState,
+      final RandomSource randomSource)
     {
-        if (stateIn.getValue(WATERLOGGED))
+        if (state.getValue(WATERLOGGED))
         {
-            tickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(worldIn));
+            scheduledTickAccess.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
         }
 
-        return stateIn;
+        return state;
     }
 }

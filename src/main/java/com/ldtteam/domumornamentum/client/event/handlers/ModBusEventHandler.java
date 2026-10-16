@@ -8,23 +8,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
-@EventBusSubscriber(
-    modid = Constants.MOD_ID,
-    value = Dist.CLIENT
-)
-public final class ModBusEventHandler
+@EventBusSubscriber(modid = Constants.MOD_ID, value = Dist.CLIENT)
+public class ModBusEventHandler
 {
-    private ModBusEventHandler()
-    {
-    }
-
     @SubscribeEvent
-    public static void onMenuScreensRegistry(
-        final RegisterMenuScreensEvent event)
+    public static void onMenuScreensRegistry(final RegisterMenuScreensEvent event)
     {
-        event.register(
-            ModContainerTypes.ARCHITECTS_CUTTER.get(),
-            ArchitectsCutterScreen::new
-        );
+        event.register(ModContainerTypes.ARCHITECTS_CUTTER.get(), ArchitectsCutterScreen::new);
     }
 }

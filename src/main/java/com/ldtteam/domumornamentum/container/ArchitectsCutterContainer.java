@@ -19,8 +19,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.BlockItemStateProperties;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -251,16 +251,23 @@ public class ArchitectsCutterContainer extends AbstractContainerMenu
     private void updateAvailableRecipes(Container inventoryIn, List<ItemStack> stacks) {
         this.recipes.clear();
         this.outputInventorySlot.set(ItemStack.EMPTY);
-        if (!stacks.stream().allMatch(ItemStack::isEmpty) && this.world instanceof final ServerLevel serverLevel) {
+        if (!stacks.stream().allMatch(ItemStack::isEmpty)) {
             final ArchitectsCutterRecipeInput input = new ArchitectsCutterRecipeInput(inventoryIn);
-            this.recipes = serverLevel.recipeAccess()
-                .getRecipes()
-                .stream()
-                .filter(holder -> holder.value().getType() == ModRecipeTypes.ARCHITECTS_CUTTER.get())
-                .<RecipeHolder<ArchitectsCutterRecipe>>map(holder -> (RecipeHolder<ArchitectsCutterRecipe>) (RecipeHolder<?>) holder)
-                .filter(holder -> holder.value().matches(input, serverLevel))
-                .sorted(Comparator.<RecipeHolder<ArchitectsCutterRecipe>, Identifier>comparing(h -> h.value().getBlockName()).thenComparing(RecipeHolder::id))
-                .collect(Collectors.toCollection(ArrayList::new));
+            if (this.world.isClientSide()) {
+                return;
+            }
+            final MinecraftServer server = this.world.getServer();
+            if (server == null) {
+                return;
+            }
+            for (final RecipeHolder<?> holder : server.getRecipeManager().getRecipes()) {
+                if (holder.value() instanceof ArchitectsCutterRecipe recipe && recipe.matches(input, this.world)) {
+                    @SuppressWarnings("unchecked")
+                    final RecipeHolder<ArchitectsCutterRecipe> typed = (RecipeHolder<ArchitectsCutterRecipe>) holder;
+                    this.recipes.add(typed);
+                }
+            }
+            this.recipes.sort(Comparator.<RecipeHolder<ArchitectsCutterRecipe>, String>comparing(h -> h.value().getBlockName().toString()).thenComparing(h -> h.id().identifier().getPath()));
         }
         updateRecipeResultSlot();
     }
@@ -270,7 +277,7 @@ public class ArchitectsCutterContainer extends AbstractContainerMenu
             for (final RecipeHolder<ArchitectsCutterRecipe> recipeHolder : recipes)
             {
                 final ArchitectsCutterRecipe recipe = recipeHolder.value();
-                final ItemStack resultItem = recipe.getResultItem(this.world.registryAccess());
+                final ItemStack resultItem = recipe.assemble(new ArchitectsCutterRecipeInput(this.inputInventory));
                 if (resultItem.getItem() == currentVariant.getItem())
                 {
                     final BlockItemStateProperties resultBlockState = resultItem.getOrDefault(DataComponents.BLOCK_STATE, BlockItemStateProperties.EMPTY);

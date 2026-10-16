@@ -82,29 +82,29 @@ public final class ModBlocks implements IModBlocks {
         ARCHITECTS_CUTTER = registerSimpleBlockItem("architectscutter", ArchitectsCutterBlock::new);
 
         for (final TimberFrameType blockType : TimberFrameType.values()) {
-            TIMBER_FRAMES.add(registerCustomBlockItem(blockType.getName(), properties -> new TimberFrameBlock(blockType, properties), (b, props) -> new TimberFrameBlockItem(b, props)));
+            TIMBER_FRAMES.add(registerCustomBlockItem(blockType.getName(), (properties) -> new TimberFrameBlock(blockType, properties), TimberFrameBlockItem::new));
         }
-        DYNAMIC_TIMBER_FRAME = registerCustomBlockItem("dynamic_timberframe", DynamicTimberFrameBlock::new, (b, props) -> new DynamicTimberFrameBlockItem(b, props));
+        DYNAMIC_TIMBER_FRAME = registerCustomBlockItem("dynamic_timberframe", DynamicTimberFrameBlock::new, DynamicTimberFrameBlockItem::new);
 
-        SHINGLE = registerCustomBlockItem("shingle", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
-        SHINGLE_FLAT = registerCustomBlockItem("shingle_flat", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
-        SHINGLE_FLAT_LOWER = registerCustomBlockItem("shingle_flat_lower", ShingleBlock::new, (b, props) -> new ShingleBlockItem(b, props));
+        SHINGLE = registerCustomBlockItem("shingle", ShingleBlock::new, ShingleBlockItem::new);
+        SHINGLE_FLAT = registerCustomBlockItem("shingle_flat", ShingleBlock::new, ShingleBlockItem::new);
+        SHINGLE_FLAT_LOWER = registerCustomBlockItem("shingle_flat_lower", ShingleBlock::new, ShingleBlockItem::new);
 
-        SHINGLE_SLAB = registerCustomBlockItem("shingle_slab", ShingleSlabBlock::new, (b, props) -> new ShingleSlabBlockItem(b, props));
-        PAPER_WALL = registerCustomBlockItem("blockpaperwall", PaperWallBlock::new, (b, props) -> new PaperwallBlockItem(b, props));
-        TILED_PAPER_WALL = registerCustomBlockItem("blocktiledpaperwall", PaperWallBlock::new, (b, props) -> new PaperwallBlockItem(b, props));
+        SHINGLE_SLAB = registerCustomBlockItem("shingle_slab", ShingleSlabBlock::new, ShingleSlabBlockItem::new);
+        PAPER_WALL = registerCustomBlockItem("blockpaperwall", PaperWallBlock::new, PaperwallBlockItem::new);
+        TILED_PAPER_WALL = registerCustomBlockItem("blocktiledpaperwall", PaperWallBlock::new, PaperwallBlockItem::new);
 
-        PILLARS.add(registerCustomBlockItem("blockpillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
-        PILLARS.add(registerCustomBlockItem("blockypillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
-        PILLARS.add(registerCustomBlockItem("squarepillar", PillarBlock::new, (b, props) -> new PillarBlockItem(b, props)));
+        PILLARS.add(registerCustomBlockItem("blockpillar", PillarBlock::new, PillarBlockItem::new));
+        PILLARS.add(registerCustomBlockItem("blockypillar", PillarBlock::new, PillarBlockItem::new));
+        PILLARS.add(registerCustomBlockItem("squarepillar", PillarBlock::new, PillarBlockItem::new));
 
         for (final ExtraBlockType blockType : ExtraBlockType.values()) {
-            EXTRA_TOP_BLOCKS.add(registerCustomBlockItem(blockType.getSerializedName(), properties -> new ExtraBlock(blockType, properties), (b, props) -> new ExtraBlockItem(b, props)));
+            EXTRA_TOP_BLOCKS.add(registerCustomBlockItem(blockType.getSerializedName(), properties -> new ExtraBlock(blockType, properties), ExtraBlockItem::new));
         }
 
         for (final FramedLightType blockType : FramedLightType.values())
         {
-            FRAMED_LIGHT.add(registerCustomBlockItem(blockType.getName(), properties -> new FramedLightBlock(blockType, properties), (b, props) -> new FramedLightBlockItem(b, props)));
+            FRAMED_LIGHT.add(registerCustomBlockItem(blockType.getName(), properties -> new FramedLightBlock(blockType, properties), FramedLightBlockItem::new));
         }
 
         for (final DyeColor color : DyeColor.values()) {
@@ -118,23 +118,23 @@ public final class ModBlocks implements IModBlocks {
         STANDING_BARREL = registerSimpleBlockItem("blockbarreldeco_standing", BarrelBlock::new);
         LAYING_BARREL = registerSimpleBlockItem("blockbarreldeco_onside", BarrelBlock::new);
 
-        FENCE = registerCustomBlockItem("vanilla_fence_compat", FenceBlock::new, (b, props) -> new FenceBlockItem(b, props));
-        FENCE_GATE = registerCustomBlockItem("vanilla_fence_gate_compat", FenceGateBlock::new, (b, props) -> new FenceGateBlockItem(b, props));
-        SLAB = registerCustomBlockItem("vanilla_slab_compat", SlabBlock::new, (b, props) -> new SlabBlockItem(b, props));
-        WALL = registerCustomBlockItem("vanilla_wall_compat", WallBlock::new, (b, props) -> new WallBlockItem(b, props));
-        STAIR = registerCustomBlockItem("vanilla_stairs_compat", StairBlock::new, (b, props) -> new StairsBlockItem(b, props));
-        TRAPDOOR = registerCustomBlockItem("vanilla_trapdoors_compat", TrapdoorBlock::new, (b, props) -> new TrapdoorBlockItem(b, props));
-        DOOR = registerCustomBlockItem("vanilla_doors_compat", DoorBlock::new, (b, props) -> new DoorBlockItem(b, props));
-        PANEL = registerCustomBlockItem("panel", PanelBlock::new, (b, props) -> new PanelBlockItem(b, props));
-        ALL_BRICK.add(registerCustomBlockItem("light_brick", AllBrickBlock::new, (b, props) -> new AllBrickBlockItem(b, props)));
-        ALL_BRICK.add(registerCustomBlockItem("dark_brick", AllBrickBlock::new, (b, props) -> new AllBrickBlockItem(b, props)));
-        ALL_BRICK_STAIR.add(registerCustomBlockItem("light_brick_stair", AllBrickStairBlock::new, (b, props) -> new AllBrickStairBlockItem(b, props)));
-        ALL_BRICK_STAIR.add(registerCustomBlockItem("dark_brick_stair", AllBrickStairBlock::new, (b, props) -> new AllBrickStairBlockItem(b, props)));
+        FENCE = registerCustomBlockItem("vanilla_fence_compat", FenceBlock::new, FenceBlockItem::new);
+        FENCE_GATE = registerCustomBlockItem("vanilla_fence_gate_compat", FenceGateBlock::new, FenceGateBlockItem::new);
+        SLAB = registerCustomBlockItem("vanilla_slab_compat", SlabBlock::new, SlabBlockItem::new);
+        WALL = registerCustomBlockItem("vanilla_wall_compat", WallBlock::new, WallBlockItem::new);
+        STAIR = registerCustomBlockItem("vanilla_stairs_compat", StairBlock::new, StairsBlockItem::new);
+        TRAPDOOR = registerCustomBlockItem("vanilla_trapdoors_compat", TrapdoorBlock::new, TrapdoorBlockItem::new);
+        DOOR = registerCustomBlockItem("vanilla_doors_compat", DoorBlock::new, DoorBlockItem::new);
+        PANEL = registerCustomBlockItem("panel", PanelBlock::new, PanelBlockItem::new);
+        ALL_BRICK.add(registerCustomBlockItem("light_brick", AllBrickBlock::new, AllBrickBlockItem::new));
+        ALL_BRICK.add(registerCustomBlockItem("dark_brick", AllBrickBlock::new, AllBrickBlockItem::new));
+        ALL_BRICK_STAIR.add(registerCustomBlockItem("light_brick_stair", AllBrickStairBlock::new, AllBrickStairBlockItem::new));
+        ALL_BRICK_STAIR.add(registerCustomBlockItem("dark_brick_stair", AllBrickStairBlock::new, AllBrickStairBlockItem::new));
 
-        POST = registerCustomBlockItem("post", PostBlock::new, (b, props) -> new PostBlockItem(b, props));
+        POST = registerCustomBlockItem("post", PostBlock::new, PostBlockItem::new);
 
-        FANCY_DOOR = registerCustomBlockItem("fancy_door", FancyDoorBlock::new, (b, props) -> new FancyDoorBlockItem(b, props));
-        FANCY_TRAPDOOR = registerCustomBlockItem("fancy_trapdoors", FancyTrapdoorBlock::new, (b, props) -> new FancyTrapdoorBlockItem(b, props));
+        FANCY_DOOR = registerCustomBlockItem("fancy_door", FancyDoorBlock::new, FancyDoorBlockItem::new);
+        FANCY_TRAPDOOR = registerCustomBlockItem("fancy_trapdoors", FancyTrapdoorBlock::new, FancyTrapdoorBlockItem::new);
     }
 
     /**
@@ -155,35 +155,26 @@ public final class ModBlocks implements IModBlocks {
     /**
      * Utility shorthand to register blocks using the deferred registry.
      * Register item block together.
-     * <p>
-     * The block factory receives {@link BlockBehaviour.Properties} that already has its
-     * {@link net.minecraft.resources.ResourceKey} set by {@link DeferredRegister.Blocks#registerBlock}, so custom
-     * block constructors must accept and build upon these properties rather than creating their own from scratch.
      *
      * @param name  the registry name of the block
      * @param block a factory / constructor to create the block on demand
      * @param <B>   the block subclass for the factory response
      * @return the block entry saved to the registry
      */
-    public static <B extends Block> DeferredBlock<B> registerSimpleBlockItem(String name, Function<BlockBehaviour.Properties, ? extends B> block)
+    public static <B extends Block> DeferredBlock<B> registerSimpleBlockItem(String name, Function<BlockBehaviour.Properties, B> block)
     {
         final DeferredBlock<B> registered = BLOCKS.registerBlock(name, block);
         ITEMS.registerSimpleBlockItem(registered);
         return registered;
     }
 
-    /**
-     * Registers a block together with a custom {@link BlockItem} subclass. Both the block properties and the item
-     * properties passed to the factories already have their ids set, and the item properties additionally have
-     * {@link Item.Properties#useBlockDescriptionPrefix()} applied.
-     */
-    public static <B extends Block> DeferredBlock<B> registerCustomBlockItem(
-        String name,
-        Function<BlockBehaviour.Properties, ? extends B> block,
-        BiFunction<B, Item.Properties, ? extends BlockItem> item)
+    public static <B extends Block> DeferredBlock<B> registerCustomBlockItem(String name, Function<BlockBehaviour.Properties, B> block, BiFunction<B, Item.Properties, ? extends BlockItem> item)
     {
         final DeferredBlock<B> registered = BLOCKS.registerBlock(name, block);
-        ITEMS.registerItem(name, props -> item.apply(registered.value(), props), () -> new Item.Properties().useBlockDescriptionPrefix());
+
+        // inline of ITEMS.registerSimpleBlockItem(registered);
+        ITEMS.registerItem(registered.unwrapKey().orElseThrow().identifier().getPath(), key -> item.apply(registered.value(), key));
+
         return registered;
     }
 

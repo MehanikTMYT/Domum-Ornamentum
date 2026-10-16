@@ -24,6 +24,7 @@ public class FloatingCarpetBlock extends AbstractBlock<FloatingCarpetBlock>
      */
     private final DyeColor color;
 
+    @SuppressWarnings("deprecation")
     public FloatingCarpetBlock(final DyeColor color, final Properties properties)
     {
         super(properties.mapColor(MapColor.WOOL).sound(SoundType.WOOL).isRedstoneConductor((state, getter, pos) -> false).forceSolidOff().strength(0.1F));

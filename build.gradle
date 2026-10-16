@@ -29,56 +29,57 @@ tableau {
     }
 }
 
-// PORT-26.1: legacy datagen temporarily excluded
 sourceSets {
-    main {
-        java {
-            exclude 'com/ldtteam/domumornamentum/datagen/**'
-        }
+    test {}
+    junit {}
+}
+
+runs {
+    junit {
+        unitTestSource project.sourceSets.junit
     }
 }
 
-// PORT-26.1: optional JEI and legacy tint code temporarily excluded
-sourceSets {
-    main {
-        java {
-            exclude 'com/ldtteam/domumornamentum/jei/**'
-            exclude 'com/ldtteam/domumornamentum/client/color/**'
-            exclude 'com/ldtteam/domumornamentum/client/event/handlers/RegisterColorHandlersEventHandler.java'
-        }
-    }
+dependencies {
+    // Unit test dependencies for the `junit` source set.
+    // Deliberately configured outside of the Tableau DSL: plain Gradle wiring avoids
+    // the early-SDK-resolution conflict that hit when these were declared through Tableau.
+    // Immediate (eager) addition so NeoGradle's SDK replacement runs before any configuration resolves.
+    junitImplementation "net.neoforged:neoforge:${findProperty('neoforge.version')}"
+
+    junitImplementation platform("org.junit:junit-bom:${junit_version}")
+    junitImplementation "org.junit.jupiter:junit-jupiter"
+    junitImplementation "org.junit.jupiter:junit-jupiter-params"
+    junitRuntimeOnly "org.junit.platform:junit-platform-launcher:${junit_platform_version}"
+    junitImplementation "org.assertj:assertj-core:${assertj_version}"
+
+    // Unit tests need to see the mod's own classes (mirrors main -> api).
+    junitImplementation project.sourceSets.api.output
+    junitImplementation project.sourceSets.main.output
 }
 
+tasks.named('check') {
+    dependsOn tasks.named('testJunit')
+}
 
-// PORT-26.1: native EMI dependency
+//Porting aid: javac stops reporting at its default error cap, silently hiding further failures.
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.addAll(['-Xmaxerrs', '20000'])
+}
+
+// Fork: locally built ports (EMI) are consumed from mavenLocal
 repositories {
     mavenLocal()
 }
 
-dependencies {
-    compileOnly "dev.emi:emi-neoforge:${property('emi.version')}:api"
-    runtimeOnly "dev.emi:emi-neoforge:${property('emi.version')}"
-}
-
-
-// PORT-26.1: full compiler diagnostics
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs.addAll([
-        '-Xdiags:verbose',
-        '-Xmaxerrs', '5000',
-        '-Xmaxwarns', '5000'
-    ])
-}
-
-
-// PORT-26.1: legacy ghost preview temporarily excluded
-// Restore after migration to RenderPipeline and block render states.
-sourceSets {
-    main {
-        java {
-            exclude 'com/ldtteam/domumornamentum/client/render/ModRenderTypes.java'
-            exclude 'com/ldtteam/domumornamentum/client/render/ModelGhostRenderer.java'
-            exclude 'com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java'
-        }
+// Fork: with the published Tableau 0.0.107 the data runs it creates (neoforge.data.runs + split) reach NeoGradle without
+// their --mod/--all/--output/--existing arguments (upstream builds against a local ../Tableau checkout), so the data
+// gatherer starts with no mods and exits printing its usage. Supply the same arguments Tableau would.
+runs.configureEach { run ->
+    if (run.name == 'clientData' || run.name == 'serverData') {
+        final String side = run.name == 'clientData' ? 'client' : 'server'
+        run.arguments.addAll('--mod', 'domum_ornamentum', '--all',
+                '--output', file("src/datagen/generated/domum_ornamentum/${side}").absolutePath,
+                '--existing', file('src/main/resources/').absolutePath)
     }
 }

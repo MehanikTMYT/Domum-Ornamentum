@@ -29,6 +29,8 @@ public class ExtraBlock extends AbstractBlock<ExtraBlock>
 
     /**
      * Constructor of the FullBlock.
+     * @param type the extra block type.
+     * @param properties the block properties.
      */
     public ExtraBlock(final ExtraBlockType type, final Properties properties)
     {

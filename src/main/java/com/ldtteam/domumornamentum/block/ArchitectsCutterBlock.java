@@ -1,8 +1,7 @@
 package com.ldtteam.domumornamentum.block;
 
-
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import com.ldtteam.domumornamentum.container.ArchitectsCutterContainer;
+import com.ldtteam.domumornamentum.util.BlockUtils;
 import com.ldtteam.domumornamentum.util.Constants;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.*;
@@ -12,6 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -36,10 +36,10 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 public final class ArchitectsCutterBlock extends AbstractBlock<ArchitectsCutterBlock>
 {
     private static final   Component    CONTAINER_NAME = Component.translatable(Constants.MOD_ID + ".architectscutter");
-    public static final    EnumProperty<Direction> FACING         = HorizontalDirectionalBlock.FACING;
-    protected static final VoxelShape SHAPE = Block.box(0.01D, 0.01D, 0.01D, 15.99D, 9.9D, 15.99D);
+	public static final  EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
+	private static final VoxelShape              SHAPE  = Block.box(0.01D, 0.01D, 0.01D, 15.99D, 9.9D, 15.99D);
 
-    public ArchitectsCutterBlock(final BlockBehaviour.Properties properties)
+    public ArchitectsCutterBlock(BlockBehaviour.Properties properties)
     {
         super(properties.mapColor(MapColor.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.5F));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));

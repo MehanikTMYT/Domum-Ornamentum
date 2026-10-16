@@ -7,10 +7,12 @@ pluginManagement {
             name = 'Tableau'
         }
     }
+
+    // Fork: upstream builds against a local ../Tableau checkout; the published 0.0.107 plugin is used instead.
 }
 
 plugins {
-    id 'com.ldtteam.tableau' version '0.0.87'
+    id 'com.ldtteam.tableau.all' version '0.0.107'
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
@@ -20,3 +22,5 @@ features {
     usesGit = true
     usesCurse = true
 }
+
+

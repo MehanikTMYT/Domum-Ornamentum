@@ -1,15 +1,12 @@
 package com.ldtteam.domumornamentum.item.vanilla;
 
-
-
-
-import java.util.function.Consumer;
-import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.item.Item.TooltipContext;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent;
+import java.util.function.Consumer;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.TooltipDisplay;
 import com.ldtteam.domumornamentum.block.vanilla.StairBlock;
 import com.ldtteam.domumornamentum.client.model.data.MaterialTextureData;
-import com.ldtteam.domumornamentum.item.BlockItemWithClientBePlacement;
+import com.ldtteam.domumornamentum.item.SelfUpgradingBlockItem;
 import com.ldtteam.domumornamentum.item.interfaces.IDoItem;
 import com.ldtteam.domumornamentum.util.BlockUtils;
 import com.ldtteam.domumornamentum.util.Constants;
@@ -21,8 +18,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
-public class StairsBlockItem extends BlockItemWithClientBePlacement implements IDoItem
+public class StairsBlockItem extends SelfUpgradingBlockItem implements IDoItem
 {
     private final StairBlock stairBlock;
 
@@ -33,27 +31,23 @@ public class StairsBlockItem extends BlockItemWithClientBePlacement implements I
     }
 
     @Override
-    public Component getName(final ItemStack stack)
+    public @NonNull Component getName(final @NonNull ItemStack stack)
     {
         final MaterialTextureData textureData = MaterialTextureData.readFromItemStack(stack);
 
         final IMateriallyTexturedBlockComponent coverComponent = stairBlock.getComponents().get(0);
-        final Block centerBlock = textureData.getTexturedComponents().getOrDefault(coverComponent.getId(), coverComponent.getDefault());
+        final Block centerBlock = textureData.components().getOrDefault(coverComponent.getId(), coverComponent.getDefault());
         final Component centerBlockName = BlockUtils.getHoverName(centerBlock);
 
         return Component.translatable(Constants.MOD_ID + ".stair.name.format", centerBlockName);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public void appendHoverText(
-      final ItemStack stack,
-      final TooltipContext tooltipContext,
-      final TooltipDisplay tooltipDisplay,
-      final Consumer<Component> tooltip,
-      final TooltipFlag flagIn)
+    public void appendHoverText(@NotNull final ItemStack stack, final Item.@NonNull TooltipContext tooltipContext, final @NonNull TooltipDisplay display, final @NonNull Consumer<Component> tooltip, @NotNull final TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, tooltipContext, tooltipDisplay, tooltip, flagIn);
-        tooltip.accept(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
+        super.appendHoverText(stack, tooltipContext, display, tooltip, flagIn);
+    tooltip.accept(Component.translatable(Constants.MOD_ID + ".origin.tooltip"));
 
         MaterialTextureData textureData = MaterialTextureData.readFromItemStack(stack);
         if (textureData.isEmpty()) {
@@ -61,8 +55,8 @@ public class StairsBlockItem extends BlockItemWithClientBePlacement implements I
         }
 
         final IMateriallyTexturedBlockComponent component = stairBlock.getComponents().get(0);
-        final Block block = textureData.getTexturedComponents().getOrDefault(component.getId(), component.getDefault());
-        tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(block))));
+        final Block block = textureData.components().getOrDefault(component.getId(), component.getDefault());
+    tooltip.accept(Component.translatable(Constants.MOD_ID + ".desc.onlyone", Component.translatable(Constants.MOD_ID + ".desc.material", BlockUtils.getHoverName(block))));
     }
 
     @Override
