@@ -88,7 +88,7 @@ public class WallModelProvider extends BaseModelProvider {
         // Item model: hand-crafted geometry at models/item/wall/wall_spec
         itemModels.itemModelOutput.accept(
                 wallBlock.asItem(),
-                ItemModelUtils.plainModel(itemModelLoc("wall/wall_spec"))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(itemModelLoc("wall/wall_spec"))
         );
     }
 

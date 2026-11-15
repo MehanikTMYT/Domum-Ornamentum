@@ -55,11 +55,10 @@ public class DynamicTimberFrameModelProvider extends BaseModelProvider {
                 MultiVariantGenerator.dispatch(timberFrameBlock, variant)
         );
 
-        // Item model: references the hand-crafted item geometry directly (items have no block entity,
-        // so they render with the default textures).
+        // Item extraction retextures the hand-crafted item geometry from the stack component.
         itemModels.itemModelOutput.accept(
                 timberFrameBlock.asItem(),
-                ItemModelUtils.plainModel(blockModelLoc("timber_frame/dynamic_timberframe_item_spec"))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(blockModelLoc("timber_frame/dynamic_timberframe_item_spec"))
         );
     }
 

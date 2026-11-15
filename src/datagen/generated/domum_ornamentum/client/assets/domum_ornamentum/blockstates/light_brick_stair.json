@@ -3,7 +3,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "x": 180,
         "y": 270
       },
@@ -16,7 +17,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "y": 270
       },
       "when": {
@@ -28,7 +30,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 270
       },
@@ -41,7 +44,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 180
       },
       "when": {
@@ -53,7 +57,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180
       },
       "when": {
@@ -65,7 +70,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 270
       },
       "when": {
@@ -77,7 +83,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 270
       },
@@ -90,7 +97,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 180
       },
       "when": {
@@ -102,7 +110,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180
       },
       "when": {
@@ -114,7 +123,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 270
       },
       "when": {
@@ -126,7 +136,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "x": 180,
         "y": 90
       },
@@ -139,7 +150,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "y": 90
       },
       "when": {
@@ -151,7 +163,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 90
       },
@@ -164,7 +177,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs"
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner"
       },
       "when": {
         "facing": "south",
@@ -175,7 +189,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 180
       },
@@ -188,7 +203,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 90
       },
       "when": {
@@ -200,7 +216,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 90
       },
@@ -213,7 +230,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs"
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer"
       },
       "when": {
         "facing": "south",
@@ -224,7 +242,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 180
       },
@@ -237,7 +256,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 90
       },
       "when": {
@@ -249,7 +269,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "x": 180,
         "y": 180
       },
@@ -262,7 +283,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "y": 180
       },
       "when": {
@@ -274,7 +296,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 180
       },
@@ -287,7 +310,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 90
       },
       "when": {
@@ -299,7 +323,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 270
       },
@@ -312,7 +337,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 180
       },
       "when": {
@@ -324,7 +350,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 180
       },
@@ -337,7 +364,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 90
       },
       "when": {
@@ -349,7 +377,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 270
       },
@@ -362,7 +391,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 180
       },
       "when": {
@@ -374,7 +404,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair",
         "x": 180
       },
       "when": {
@@ -386,7 +417,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_stairs"
+        "parent": "domum_ornamentum:block/stair/stairs_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair"
       },
       "when": {
         "facing": "east",
@@ -397,7 +429,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180
       },
       "when": {
@@ -409,7 +442,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "y": 270
       },
       "when": {
@@ -421,7 +455,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner",
         "x": 180,
         "y": 90
       },
@@ -434,7 +469,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_inner_stairs"
+        "parent": "domum_ornamentum:block/stair/stairs_inner_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_inner"
       },
       "when": {
         "facing": "east",
@@ -445,7 +481,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180
       },
       "when": {
@@ -457,7 +494,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "y": 270
       },
       "when": {
@@ -469,7 +507,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs",
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer",
         "x": 180,
         "y": 90
       },
@@ -482,7 +521,8 @@
     {
       "apply": {
         "type": "domum_ornamentum:materially_textured",
-        "parent": "domum_ornamentum:block/allbrick/light_brick_stair_outer_stairs"
+        "parent": "domum_ornamentum:block/stair/stairs_outer_spec",
+        "overlay": "domum_ornamentum:block/allbrick/light_brick_stair_outer"
       },
       "when": {
         "facing": "east",

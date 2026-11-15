@@ -64,21 +64,9 @@ public class AllBrickStairModelProvider extends BaseModelProvider {
                                             BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         final String blockName = allBrickStairBlock.getRegistryName().getPath();
 
-        // Generate the three stair geometries (straight/inner/outer) at block/allbrick/<name>_*;
-        // runtime retexturing is applied by the materially_textured custom loader.
-        final Material material = new Material(BASE_TEXTURE);
-        final TextureMapping textures = new TextureMapping()
-                .put(TextureSlot.BOTTOM, material)
-                .put(TextureSlot.TOP, material)
-                .put(TextureSlot.SIDE, material);
-
-        final Identifier straightLoc = blockModelLoc("allbrick/" + blockName + "_stairs");
-        ModelTemplates.STAIRS_STRAIGHT.create(straightLoc, textures, blockModels.modelOutput);
-        final Identifier innerLoc = blockModelLoc("allbrick/" + blockName + "_inner_stairs");
-        ModelTemplates.STAIRS_INNER.create(innerLoc, textures, blockModels.modelOutput);
-        final Identifier outerLoc = blockModelLoc("allbrick/" + blockName + "_outer_stairs");
-        ModelTemplates.STAIRS_OUTER.create(outerLoc, textures, blockModels.modelOutput);
-
+        final Identifier straightLoc = blockModelLoc("stair/stairs_spec");
+        final Identifier innerLoc = blockModelLoc("stair/stairs_inner_spec");
+        final Identifier outerLoc = blockModelLoc("stair/stairs_outer_spec");
         final Map<StairsShape, Identifier> specLocs = new HashMap<>();
         for (final StairsShape shape : SHAPE.getPossibleValues()) {
             specLocs.put(shape, switch (shape) {
@@ -93,20 +81,27 @@ public class AllBrickStairModelProvider extends BaseModelProvider {
             for (final StairsShape shape : SHAPE.getPossibleValues()) {
                 for (final Half half : HALF.getPossibleValues()) {
                     final VariantMutator mutator = getRotationMutator(half, facing, shape);
+                    final Identifier overlay = blockModelLoc("allbrick/" + blockName + switch (shape) {
+                        case INNER_LEFT, INNER_RIGHT -> "_inner";
+                        case OUTER_LEFT, OUTER_RIGHT -> "_outer";
+                        default -> "";
+                    });
                     multipart.with(
                             new ConditionBuilder()
                                     .term(FACING, facing)
                                     .term(SHAPE, shape)
                                     .term(HALF, half),
                             mutator == BlockModelGenerators.NOP
-                                    ? MateriallyTexturedBuilder.multiVariantWithParent(specLocs.get(shape))
-                                    : MateriallyTexturedBuilder.multiVariantWithParent(specLocs.get(shape)).with(mutator));
+                                    ? MateriallyTexturedBuilder.multiVariantWithOverlay(specLocs.get(shape), overlay)
+                                    : MateriallyTexturedBuilder.multiVariantWithOverlay(specLocs.get(shape), overlay).with(mutator));
                 }
             }
         }
         blockModels.blockStateOutput.accept(multipart);
 
-        createItemModel(itemModels, allBrickStairBlock, straightLoc);
+        itemModels.itemModelOutput.accept(allBrickStairBlock.asItem(),
+                new com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.Unbaked(
+                        straightLoc, java.util.Optional.of(blockModelLoc("allbrick/" + blockName))));
     }
 
     // Rotation table verified against the old vanilla_stairs_compat ground truth (see StairsModelProvider).

@@ -102,7 +102,7 @@ public class ShinglesModelProvider extends BaseModelProvider {
         // Item model: references STRAIGHT shape custom loader spec
         itemModels.itemModelOutput.accept(
                 shingle.asItem(),
-                ItemModelUtils.plainModel(specLocs.get(StairsShape.STRAIGHT))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLocs.get(StairsShape.STRAIGHT))
         );
     }
 

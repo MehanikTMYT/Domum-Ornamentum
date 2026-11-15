@@ -1,6 +1,6 @@
 {
   "model": {
-    "type": "minecraft:model",
+    "type": "domum_ornamentum:materially_textured",
     "model": "domum_ornamentum:block/timber_frame/one_crossed_rl_spec"
   }
 }

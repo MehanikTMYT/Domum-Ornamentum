@@ -208,7 +208,7 @@ public class DynamicTimberFrameBlockEntity extends AbstractMateriallyTexturedBlo
     {
         super.loadAdditional(input);
 
-        input.read(BLOCK_ENTITY_TEXTURE_DATA, MaterialTextureData.CODEC);
+        originalTextureData = input.read(BLOCK_ENTITY_TEXTURE_DATA, MaterialTextureData.CODEC).orElse(MaterialTextureData.EMPTY);
         this.centerBlock = input.read(PRIMARY_BLOCK, BuiltInRegistries.BLOCK.byNameCodec()).orElse(Blocks.AIR);
         this.frameBlock = input.read(SECONDARY_BLOCK, BuiltInRegistries.BLOCK.byNameCodec()).orElse(Blocks.AIR);
 
@@ -244,8 +244,8 @@ public class DynamicTimberFrameBlockEntity extends AbstractMateriallyTexturedBlo
     @Override
     public void updateTextureDataWith(final MaterialTextureData materialTextureData)
     {
-        centerBlock = materialTextureData.components().get(Identifier.withDefaultNamespace("block/dark_oak_planks"));
-        frameBlock = materialTextureData.components().get(Identifier.withDefaultNamespace("block/oak_planks"));
+        centerBlock = materialTextureData.components().getOrDefault(Identifier.withDefaultNamespace("block/dark_oak_planks"), Blocks.DARK_OAK_PLANKS);
+        frameBlock = materialTextureData.components().getOrDefault(Identifier.withDefaultNamespace("block/oak_planks"), Blocks.OAK_PLANKS);
         handleTextureMapping();
         originalTextureData = materialTextureData;
     }
@@ -550,6 +550,12 @@ public class DynamicTimberFrameBlockEntity extends AbstractMateriallyTexturedBlo
     public MaterialTextureData getTextureData()
     {
         return originalTextureData;
+    }
+
+    @Override
+    public MaterialTextureData getRenderTextureData() {
+        getModelData(); // initializes the immutable connected-geometry snapshot once after load
+        return textureDataCache;
     }
 
     /**

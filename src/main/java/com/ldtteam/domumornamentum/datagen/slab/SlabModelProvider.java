@@ -65,7 +65,7 @@ public class SlabModelProvider extends BaseModelProvider {
         // Item model references the hand-crafted item geometry (models/item/slab/slab_spec).
         itemModels.itemModelOutput.accept(
                 slabBlock.asItem(),
-                ItemModelUtils.plainModel(itemModelLoc("slab/slab_spec"))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(itemModelLoc("slab/slab_spec"))
         );
     }
 

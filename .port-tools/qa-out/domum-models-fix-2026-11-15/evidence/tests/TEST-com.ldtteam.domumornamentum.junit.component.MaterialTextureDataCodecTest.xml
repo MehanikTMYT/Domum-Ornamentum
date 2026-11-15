@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-15T17:49:31.610Z" hostname="mainHost-de" time="0.224">
+  <properties/>
+  <testcase name="non-empty data round-trips through the network stream codec" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.106"/>
+  <testcase name="empty data round-trips through NBT as an empty compound" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.037"/>
+  <testcase name="non-empty data round-trips through NBT using registered block names" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.011"/>
+  <testcase name="non-empty data round-trips through JSON using registered block names" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.033"/>
+  <testcase name="the registered texture_data component uses these codecs and round-trips through them" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.003"/>
+  <testcase name="an item stack persists the component through ItemStack NBT serialization" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.028"/>
+  <testcase name="empty data round-trips through JSON as an empty object" classname="com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

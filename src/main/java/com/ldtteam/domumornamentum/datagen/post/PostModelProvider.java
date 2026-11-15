@@ -97,7 +97,7 @@ public class PostModelProvider extends BaseModelProvider {
         // Item model with rangeSelect overrides for each type
         final List<RangeSelectItemModel.Entry> entries = new ArrayList<>();
         for (int i = 0; i < types.length; i++) {
-            entries.add(ItemModelUtils.override(ItemModelUtils.plainModel(specLocs[i]), (float) i));
+            entries.add(ItemModelUtils.override(com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLocs[i]), (float) i));
         }
         itemModels.itemModelOutput.accept(postBlock.asItem(),
                 ItemModelUtils.rangeSelect(PostTypeProperty.INSTANCE, entries)

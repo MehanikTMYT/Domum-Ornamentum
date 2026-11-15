@@ -1,0 +1,191 @@
+Compiled from "CompositeBlockModel.java"
+public class net.neoforged.neoforge.client.model.block.CompositeBlockModel implements net.neoforged.neoforge.client.model.DynamicBlockStateModel {
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModel> models;
+
+  private final net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial;
+
+  private final int materialFlags;
+
+  public net.neoforged.neoforge.client.model.block.CompositeBlockModel(java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModel>);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #7                  // Field models:Ljava/util/List;
+         9: aload_0
+        10: aload_1
+        11: invokeinterface #13,  1           // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+        16: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        19: invokeinterface #21,  1           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.particleMaterial:()Lnet/minecraft/client/resources/model/sprite/Material$Baked;
+        24: putfield      #25                 // Field particleMaterial:Lnet/minecraft/client/resources/model/sprite/Material$Baked;
+        27: iconst_0
+        28: istore_2
+        29: aload_1
+        30: invokeinterface #28,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        35: astore_3
+        36: aload_3
+        37: invokeinterface #32,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        42: ifeq          69
+        45: aload_3
+        46: invokeinterface #38,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        51: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        54: astore        4
+        56: iload_2
+        57: aload         4
+        59: invokeinterface #41,  1           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.materialFlags:()I
+        64: ior
+        65: istore_2
+        66: goto          36
+        69: aload_0
+        70: iload_2
+        71: putfield      #45                 // Field materialFlags:I
+        74: return
+
+  public java.lang.Object createGeometryKey(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+    Code:
+         0: aload         4
+         2: invokeinterface #48,  1           // InterfaceMethod net/minecraft/util/RandomSource.nextLong:()J
+         7: lstore        5
+         9: aload_0
+        10: getfield      #7                  // Field models:Ljava/util/List;
+        13: invokeinterface #54,  1           // InterfaceMethod java/util/List.size:()I
+        18: iconst_1
+        19: if_icmpne     54
+        22: aload         4
+        24: lload         5
+        26: invokeinterface #57,  3           // InterfaceMethod net/minecraft/util/RandomSource.setSeed:(J)V
+        31: aload_0
+        32: getfield      #7                  // Field models:Ljava/util/List;
+        35: invokeinterface #13,  1           // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+        40: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        43: aload_1
+        44: aload_2
+        45: aload_3
+        46: aload         4
+        48: invokeinterface #61,  5           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.createGeometryKey:(Lnet/minecraft/client/renderer/block/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)Ljava/lang/Object;
+        53: areturn
+        54: new           #65                 // class java/util/ArrayList
+        57: dup
+        58: aload_0
+        59: getfield      #7                  // Field models:Ljava/util/List;
+        62: invokeinterface #54,  1           // InterfaceMethod java/util/List.size:()I
+        67: invokespecial #67                 // Method java/util/ArrayList."<init>":(I)V
+        70: astore        7
+        72: aload_0
+        73: getfield      #7                  // Field models:Ljava/util/List;
+        76: invokeinterface #28,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        81: astore        8
+        83: aload         8
+        85: invokeinterface #32,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        90: ifeq          148
+        93: aload         8
+        95: invokeinterface #38,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       100: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+       103: astore        9
+       105: aload         4
+       107: lload         5
+       109: invokeinterface #57,  3           // InterfaceMethod net/minecraft/util/RandomSource.setSeed:(J)V
+       114: aload         9
+       116: aload_1
+       117: aload_2
+       118: aload_3
+       119: aload         4
+       121: invokeinterface #61,  5           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.createGeometryKey:(Lnet/minecraft/client/renderer/block/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)Ljava/lang/Object;
+       126: astore        10
+       128: aload         10
+       130: ifnonnull     135
+       133: aconst_null
+       134: areturn
+       135: aload         7
+       137: aload         10
+       139: invokeinterface #70,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+       144: pop
+       145: goto          83
+       148: new           #74                 // class net/neoforged/neoforge/client/model/block/CompositeBlockModel$GeometryKey
+       151: dup
+       152: aload         7
+       154: aload_0
+       155: invokespecial #76                 // Method net/neoforged/neoforge/client/model/block/CompositeBlockModel$GeometryKey."<init>":(Ljava/util/List;Lnet/neoforged/neoforge/client/model/block/CompositeBlockModel;)V
+       158: areturn
+
+  public void collectParts(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource, java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart>);
+    Code:
+         0: aload         4
+         2: invokeinterface #48,  1           // InterfaceMethod net/minecraft/util/RandomSource.nextLong:()J
+         7: lstore        6
+         9: aload_0
+        10: getfield      #7                  // Field models:Ljava/util/List;
+        13: invokeinterface #28,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        18: astore        8
+        20: aload         8
+        22: invokeinterface #32,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        27: ifeq          68
+        30: aload         8
+        32: invokeinterface #38,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        37: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        40: astore        9
+        42: aload         4
+        44: lload         6
+        46: invokeinterface #57,  3           // InterfaceMethod net/minecraft/util/RandomSource.setSeed:(J)V
+        51: aload         9
+        53: aload_1
+        54: aload_2
+        55: aload_3
+        56: aload         4
+        58: aload         5
+        60: invokeinterface #79,  6           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.collectParts:(Lnet/minecraft/client/renderer/block/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;Ljava/util/List;)V
+        65: goto          20
+        68: return
+
+  public net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial();
+    Code:
+         0: aload_0
+         1: getfield      #25                 // Field particleMaterial:Lnet/minecraft/client/resources/model/sprite/Material$Baked;
+         4: areturn
+
+  public net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field models:Ljava/util/List;
+         4: invokeinterface #13,  1           // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+         9: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        12: aload_1
+        13: aload_2
+        14: aload_3
+        15: invokeinterface #83,  4           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.particleMaterial:(Lnet/minecraft/client/renderer/block/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/resources/model/sprite/Material$Baked;
+        20: areturn
+
+  public int materialFlags();
+    Code:
+         0: aload_0
+         1: getfield      #45                 // Field materialFlags:I
+         4: ireturn
+
+  public int materialFlags(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    Code:
+         0: iconst_0
+         1: istore        4
+         3: aload_0
+         4: getfield      #7                  // Field models:Ljava/util/List;
+         7: invokeinterface #28,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        12: astore        5
+        14: aload         5
+        16: invokeinterface #32,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        21: ifeq          54
+        24: aload         5
+        26: invokeinterface #38,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        31: checkcast     #19                 // class net/minecraft/client/renderer/block/dispatch/BlockStateModel
+        34: astore        6
+        36: iload         4
+        38: aload         6
+        40: aload_1
+        41: aload_2
+        42: aload_3
+        43: invokeinterface #86,  4           // InterfaceMethod net/minecraft/client/renderer/block/dispatch/BlockStateModel.materialFlags:(Lnet/minecraft/client/renderer/block/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+        48: ior
+        49: istore        4
+        51: goto          14
+        54: iload         4
+        56: ireturn
+}

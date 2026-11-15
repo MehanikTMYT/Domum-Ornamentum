@@ -1,6 +1,7 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "domum_ornamentum:block/allbrick/light_brick_stair_stairs"
+    "type": "domum_ornamentum:materially_textured",
+    "model": "domum_ornamentum:block/stair/stairs_spec",
+    "overlay": "domum_ornamentum:block/allbrick/light_brick_stair"
   }
 }

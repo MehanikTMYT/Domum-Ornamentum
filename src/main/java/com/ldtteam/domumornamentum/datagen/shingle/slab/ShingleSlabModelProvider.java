@@ -86,7 +86,7 @@ public class ShingleSlabModelProvider extends BaseModelProvider {
         // Item model: references TOP shape custom loader spec
         itemModels.itemModelOutput.accept(
                 shingle.asItem(),
-                ItemModelUtils.plainModel(specLocs.get(ShingleSlabShapeType.TOP))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLocs.get(ShingleSlabShapeType.TOP))
         );
     }
 

@@ -76,7 +76,7 @@ public class PillarModelProvider extends BaseModelProvider {
         // Item model: references FULL_PILLAR custom loader spec (created above)
         itemModels.itemModelOutput.accept(
                 pillar.asItem(),
-                ItemModelUtils.plainModel(fullPillarSpecLoc)
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(fullPillarSpecLoc)
         );
     }
 

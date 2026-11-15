@@ -90,7 +90,7 @@ public class FenceGateModelProvider extends BaseModelProvider {
         // so they render with the default textures).
         itemModels.itemModelOutput.accept(
                 fenceGateBlock.asItem(),
-                ItemModelUtils.plainModel(itemModelLoc("fence_gate/fence_gate_spec"))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(itemModelLoc("fence_gate/fence_gate_spec"))
         );
     }
 

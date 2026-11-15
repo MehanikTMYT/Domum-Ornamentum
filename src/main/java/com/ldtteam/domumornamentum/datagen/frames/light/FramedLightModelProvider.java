@@ -62,7 +62,7 @@ public class FramedLightModelProvider extends BaseModelProvider {
         // geometry directly (items have no block entity and render with the default textures).
         itemModels.itemModelOutput.accept(
                 framedLightBlock.asItem(),
-                ItemModelUtils.plainModel(specLoc)
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLoc)
         );
     }
 

@@ -52,17 +52,13 @@ public class AllBrickModelProvider extends BaseModelProvider {
                                             BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         final String blockName = allBrickBlock.getRegistryName().getPath();
 
-        // Generate a cube_all model at block/allbrick/<name> textured with the oak_planks base;
-        // runtime retexturing is applied by the materially_textured custom loader.
-        final Identifier modelLoc = blockModelLoc("allbrick/" + blockName);
-        ModelTemplates.CUBE_ALL.create(modelLoc,
-                TextureMapping.cube(new Material(BASE_TEXTURE)),
-                blockModels.modelOutput);
+        final Identifier base = blockModelLoc("allbrick/block_spec");
+        final Identifier overlay = blockModelLoc("allbrick/" + blockName);
+        blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(allBrickBlock,
+                MateriallyTexturedBuilder.multiVariantWithOverlay(base, overlay)));
+        itemModels.itemModelOutput.accept(allBrickBlock.asItem(),
+                new com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.Unbaked(base, java.util.Optional.of(overlay)));
 
-        blockModels.blockStateOutput.accept(
-                MultiVariantGenerator.dispatch(allBrickBlock, MateriallyTexturedBuilder.multiVariantWithParent(modelLoc)));
-
-        createItemModel(itemModels, allBrickBlock, modelLoc);
     }
 
     @Override

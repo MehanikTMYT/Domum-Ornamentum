@@ -4,14 +4,14 @@
     "entries": [
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/fancy/door_full_spec"
         },
         "threshold": 0.0
       },
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/fancy/door_creeper_spec"
         },
         "threshold": 1.0

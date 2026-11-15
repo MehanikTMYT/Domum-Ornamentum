@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-15T17:49:31.969Z" hostname="mainHost-de" time="0.057">
+  <properties/>
+  <testcase name="domum_ornamentum:panel_type round-trips through JSON" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.014"/>
+  <testcase name="domum_ornamentum:trapdoor_type round-trips through JSON" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.002"/>
+  <testcase name="domum_ornamentum:fancy_trapdoor_type round-trips through JSON" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:post_type round-trips through JSON" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:panel_type type() is the registered codec" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:trapdoor_type type() is the registered codec" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.007"/>
+  <testcase name="domum_ornamentum:fancy_trapdoor_type type() is the registered codec" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:post_type type() is the registered codec" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.003"/>
+  <testcase name="domum_ornamentum:panel_type round-trips through NBT" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.002"/>
+  <testcase name="domum_ornamentum:trapdoor_type round-trips through NBT" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:fancy_trapdoor_type round-trips through NBT" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <testcase name="domum_ornamentum:post_type round-trips through NBT" classname="com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

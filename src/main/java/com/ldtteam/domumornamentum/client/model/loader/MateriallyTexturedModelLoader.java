@@ -15,6 +15,12 @@ public class MateriallyTexturedModelLoader {
     }
 
     @SubscribeEvent
+    public static void onRegisterItemModels(final net.neoforged.neoforge.client.event.RegisterItemModelsEvent event) {
+        event.register(Constants.MATERIALLY_TEXTURED_MODEL_LOADER,
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.Unbaked.CODEC);
+    }
+
+    @SubscribeEvent
     public static void onRegisterBlockStateModels(final RegisterBlockStateModels event) {
         event.registerModel(Constants.MATERIALLY_TEXTURED_MODEL_LOADER, MateriallyTexturedUnbakedModel.CODEC);
     }

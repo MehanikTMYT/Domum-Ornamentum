@@ -85,7 +85,7 @@ public class PaperwallModelProvider extends BaseModelProvider {
         // Item model: hand-crafted geometry at models/item/paperwall/block<tiled>paperwall_spec
         itemModels.itemModelOutput.accept(
                 paperWallBlock.asItem(),
-                ItemModelUtils.plainModel(itemModelLoc("paperwall/block" + type + "paperwall_spec"))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(itemModelLoc("paperwall/block" + type + "paperwall_spec"))
         );
     }
 

@@ -103,7 +103,7 @@ public class FancyDoorsModelProvider extends BaseModelProvider {
         final List<RangeSelectItemModel.Entry> entries = new ArrayList<>();
         for (int i = 0; i < types.length; i++) {
             entries.add(ItemModelUtils.override(
-                    ItemModelUtils.plainModel(itemModelLoc("door/fancy/door_" + types[i].getSerializedName() + "_spec")),
+                    com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(itemModelLoc("door/fancy/door_" + types[i].getSerializedName() + "_spec")),
                     (float) i));
         }
         itemModels.itemModelOutput.accept(fancyDoorBlock.asItem(),

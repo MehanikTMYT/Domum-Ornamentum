@@ -21,4 +21,7 @@ public interface IMateriallyTexturedBlockEntity
      */
     @NotNull
     MaterialTextureData getTextureData();
+
+    /** Render mapping; connected models may expand their persistent component into geometry slots. */
+    default MaterialTextureData getRenderTextureData() { return getTextureData(); }
 }

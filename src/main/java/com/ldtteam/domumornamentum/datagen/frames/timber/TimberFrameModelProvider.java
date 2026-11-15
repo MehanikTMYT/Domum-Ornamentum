@@ -81,7 +81,7 @@ public class TimberFrameModelProvider extends BaseModelProvider {
         // so they render with the default textures).
         itemModels.itemModelOutput.accept(
                 timberFrameBlock.asItem(),
-                ItemModelUtils.plainModel(specLoc)
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLoc)
         );
     }
 

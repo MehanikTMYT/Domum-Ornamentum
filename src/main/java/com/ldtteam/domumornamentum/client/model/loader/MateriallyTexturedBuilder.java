@@ -7,6 +7,7 @@ import net.neoforged.neoforge.client.model.block.CustomUnbakedBlockStateModel;
 import net.neoforged.neoforge.client.model.generators.blockstate.CustomBlockStateModelBuilder;
 import net.neoforged.neoforge.client.model.generators.blockstate.UnbakedMutator;
 import org.jspecify.annotations.NonNull;
+import java.util.Optional;
 
 /**
  * Datagen builder for {@link MateriallyTexturedUnbakedModel}.
@@ -19,6 +20,7 @@ import org.jspecify.annotations.NonNull;
 public final class MateriallyTexturedBuilder extends CustomBlockStateModelBuilder {
 
     private final Identifier parent;
+    private final Optional<Identifier> overlay;
     private final Variant.SimpleModelState state;
 
     public static MateriallyTexturedBuilder withParent(final @NonNull Identifier parent) {
@@ -30,12 +32,18 @@ public final class MateriallyTexturedBuilder extends CustomBlockStateModelBuilde
         return MultiVariant.of(new MateriallyTexturedBuilder(parent));
     }
 
+    public static MultiVariant multiVariantWithOverlay(final Identifier parent, final Identifier overlay) {
+        return MultiVariant.of(new MateriallyTexturedBuilder(parent, Variant.SimpleModelState.DEFAULT, Optional.of(overlay)));
+    }
+
     private MateriallyTexturedBuilder(final Identifier parent) {
         this.parent = parent;
         this.state = Variant.SimpleModelState.DEFAULT;
+        this.overlay = Optional.empty();
     }
 
-    private MateriallyTexturedBuilder(final Identifier parent, final Variant.SimpleModelState state) {
+    private MateriallyTexturedBuilder(final Identifier parent, final Variant.SimpleModelState state, final Optional<Identifier> overlay) {
+        this.overlay = overlay;
         this.parent = parent;
         this.state = state;
     }
@@ -44,18 +52,18 @@ public final class MateriallyTexturedBuilder extends CustomBlockStateModelBuilde
     public MateriallyTexturedBuilder with(final net.minecraft.client.renderer.block.dispatch.VariantMutator variantMutator) {
         // Apply the mutator to a variant carrying our current rotation state so chained mutators compose.
         final Variant mutated = new Variant(parent, this.state).with(variantMutator);
-        return new MateriallyTexturedBuilder(this.parent, mutated.modelState());
+        return new MateriallyTexturedBuilder(this.parent, mutated.modelState(), overlay);
     }
 
     @Override
     public CustomBlockStateModelBuilder with(final UnbakedMutator variantMutator) {
         final var mutated = (MateriallyTexturedUnbakedModel) variantMutator.apply(toUnbaked());
         return new MateriallyTexturedBuilder(mutated.parentLocation(),
-            new Variant.SimpleModelState(mutated.x(), mutated.y(), mutated.z(), false));
+            new Variant.SimpleModelState(mutated.x(), mutated.y(), mutated.z(), false), mutated.overlay());
     }
 
     @Override
     public CustomUnbakedBlockStateModel toUnbaked() {
-        return new MateriallyTexturedUnbakedModel(parent, state.x(), state.y(), state.z());
+        return new MateriallyTexturedUnbakedModel(parent, state.x(), state.y(), state.z(), overlay);
     }
 }

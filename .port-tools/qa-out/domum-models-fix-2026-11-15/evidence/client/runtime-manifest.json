@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/root/home/forks/Domum-Ornamentum/build/libs/domum-ornamentum-1.0.0-local-main.jar",
+    "runtime": "/root/home/forks/.agent-sandbox/domum-models-fix-20261115/client/mods/domum-ornamentum-1.0.0-local-main.jar",
+    "sha256": "cb10cef1b55161af1b21f28d3e23c3d148978180fdc08fd2e875d5b9f39d9744"
+  },
+  {
+    "source": "/root/home/forks/BlockUI/build/libs/blockui-0.0.1-26.1.2.jar",
+    "runtime": "/root/home/forks/.agent-sandbox/domum-models-fix-20261115/client/mods/blockui-0.0.1-26.1.2.jar",
+    "sha256": "cee92f971e07b02c6ca194923a129cf4df708a7a84b217dbfb1c9cd3b7223e37"
+  },
+  {
+    "source": "/root/home/forks/MineColonies/build/libs/minecolonies-1.1.1397-26.1.2.jar",
+    "runtime": "/root/home/forks/.agent-sandbox/domum-models-fix-20261115/client/mods/minecolonies-1.1.1397-26.1.2.jar",
+    "sha256": "55e46b4e7d7093fc8f3fcd61d615c8c93ab991f6b5f78454151683938f27b84f"
+  },
+  {
+    "source": "/root/home/forks/Structurize/build/libs/structurize-0.0.1-26.1.2.jar",
+    "runtime": "/root/home/forks/.agent-sandbox/domum-models-fix-20261115/client/mods/structurize-0.0.1-26.1.2.jar",
+    "sha256": "37b77a7b4454abe8433ef065f2e5fbb26c71d65160061e2b6348e41743de4547"
+  },
+  {
+    "source": "/root/.m2/repository/dev/emi/emi-neoforge/1.1.24-semi151a6c88+26.1.2/emi-neoforge-1.1.24-semi151a6c88+26.1.2.jar",
+    "runtime": "classpath",
+    "sha256": "8dfdeb51d03a2dfd0e830b045847bc211b75cd83c35f3a305a161c2197539f93"
+  }
+]

@@ -89,7 +89,7 @@ public class StairsModelProvider extends BaseModelProvider {
         // Item model: references the straight-stairs custom loader spec (created above)
         itemModels.itemModelOutput.accept(
                 stairBlock.asItem(),
-                ItemModelUtils.plainModel(specLocs.get(StairsShape.STRAIGHT))
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(specLocs.get(StairsShape.STRAIGHT))
         );
     }
 

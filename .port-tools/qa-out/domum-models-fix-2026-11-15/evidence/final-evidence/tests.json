@@ -1,0 +1,32 @@
+[
+  {
+    "name": "com.ldtteam.domumornamentum.junit.component.MaterialTextureDataCodecTest",
+    "tests": "7",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-15T17:49:31.610Z",
+    "hostname": "mainHost-de",
+    "time": "0.224"
+  },
+  {
+    "name": "com.ldtteam.domumornamentum.junit.datagen.RangeSelectItemModelPropertyTest",
+    "tests": "12",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-15T17:49:31.969Z",
+    "hostname": "mainHost-de",
+    "time": "0.057"
+  },
+  {
+    "name": "com.ldtteam.domumornamentum.junit.datagen.MaterialModelCodecTest",
+    "tests": "2",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-15T17:49:31.838Z",
+    "hostname": "mainHost-de",
+    "time": "0.043"
+  }
+]

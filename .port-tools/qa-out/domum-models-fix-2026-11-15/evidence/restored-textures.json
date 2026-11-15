@@ -1,0 +1,14 @@
+{
+  "allbrick_brick_overlay_dark.png": {
+    "source_commit": "a594045",
+    "git_blob": "e1857808bcae173096664c047055fb9ff5ddb0dd",
+    "sha256": "eee8bc7b9e60860c28979acbc720dd369ed68bbf6c1268608348a1aa56ce346c",
+    "bytes": 810
+  },
+  "allbrick_brick_overlay_light.png": {
+    "source_commit": "a594045",
+    "git_blob": "c8e1925b36a39cf490b43fd06b2fa439b8df1ec4",
+    "sha256": "ca2c288ec9ee71f464c3b79e7af5edbb006d29c80979c75e0c2571e4765868ea",
+    "bytes": 1111
+  }
+}

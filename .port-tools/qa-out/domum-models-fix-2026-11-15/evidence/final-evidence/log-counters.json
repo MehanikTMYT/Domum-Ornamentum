@@ -1,0 +1,56 @@
+{
+  "baseline-client/console.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 9,
+    "domum_missing_models_or_textures": 2,
+    "minecolonies_failed_models": 7,
+    "server_done": 0,
+    "dimensions_saved": 0
+  },
+  "client/qa-1.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 0,
+    "domum_missing_models_or_textures": 11,
+    "minecolonies_failed_models": 7,
+    "server_done": 0,
+    "dimensions_saved": 0
+  },
+  "client/qa-final.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 0,
+    "domum_missing_models_or_textures": 0,
+    "minecolonies_failed_models": 14,
+    "server_done": 0,
+    "dimensions_saved": 0
+  },
+  "client/qa-reentry.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 0,
+    "domum_missing_models_or_textures": 0,
+    "minecolonies_failed_models": 7,
+    "server_done": 0,
+    "dimensions_saved": 0
+  },
+  "server/final-smoke.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 0,
+    "domum_missing_models_or_textures": 0,
+    "minecolonies_failed_models": 0,
+    "server_done": 1,
+    "dimensions_saved": 3
+  },
+  "server/final-reopen.log": {
+    "fatal": 0,
+    "injection_error": 0,
+    "domum_failed_models": 0,
+    "domum_missing_models_or_textures": 0,
+    "minecolonies_failed_models": 0,
+    "server_done": 1,
+    "dimensions_saved": 3
+  }
+}

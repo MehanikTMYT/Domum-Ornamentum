@@ -3,7 +3,7 @@ package com.ldtteam.domumornamentum.client.event.handlers;
 import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlock;
 import com.ldtteam.domumornamentum.client.model.RetexturingHandler;
 import com.ldtteam.domumornamentum.client.model.retexturing.TargetTextureSource;
-import com.ldtteam.domumornamentum.entity.block.MateriallyTexturedBlockEntity;
+import com.ldtteam.domumornamentum.entity.block.IMateriallyTexturedBlockEntity;
 import com.ldtteam.domumornamentum.util.Constants;
 import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.client.Minecraft;
@@ -41,12 +41,12 @@ public final class MateriallyTexturedBlockTintProvider {
     private static final IClientBlockExtensions EXTENSIONS = new IClientBlockExtensions() {
         @Override
         public void collectDynamicTintValues(final @NonNull BlockState state, final BlockAndTintGetter level, final @NonNull BlockPos pos, final @NonNull IntList tintValues) {
-            if (!(level.getBlockEntity(pos) instanceof MateriallyTexturedBlockEntity texturedBlockEntity)) {
+            if (!(level.getBlockEntity(pos) instanceof IMateriallyTexturedBlockEntity texturedBlockEntity)) {
                 //No block entity: retexturing is inactive and no dynamic tints are needed for this instance.
                 return;
             }
 
-            for (final TargetTextureSource source : RetexturingHandler.targetsFor(texturedBlockEntity.getTextureData())) {
+            for (final TargetTextureSource source : RetexturingHandler.targetsFor(texturedBlockEntity.getRenderTextureData())) {
                 if (source.originalTintIndex() == -1) {
                     tintValues.add(-1);
                     continue;

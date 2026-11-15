@@ -130,7 +130,7 @@ public final class RetexturingHandler {
 
         //This is an erasure statement: no quad with that texture should be emitted into the resulting model.
         final Block targetBlock = textureData.components().get(textureName);
-        if (targetBlock == null) {
+        if (targetBlock == null || targetBlock == net.minecraft.world.level.block.Blocks.AIR) {
             return null;
         }
 
@@ -199,7 +199,7 @@ public final class RetexturingHandler {
 
         for (final Identifier name : names) {
             //Null components are erasures; they get no tint entry and drop their quads in processQuad.
-            if (!textureData.components().containsKey(name) || textureData.components().get(name) == null) {
+            if (!textureData.components().containsKey(name) || textureData.components().get(name) == null || textureData.components().get(name) == net.minecraft.world.level.block.Blocks.AIR) {
                 continue;
             }
 

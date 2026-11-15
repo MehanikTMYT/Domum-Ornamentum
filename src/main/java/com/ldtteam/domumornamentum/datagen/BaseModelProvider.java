@@ -52,7 +52,6 @@ public abstract class BaseModelProvider extends ModelProvider {
             @Override
             public JsonObject get() {
                 JsonObject json = new JsonObject();
-                json.addProperty("loader", MATERIALLY_TEXTURED_LOADER.toString());
                 json.addProperty("parent", modelLoc.toString());
                 return json;
             }
@@ -76,7 +75,6 @@ public abstract class BaseModelProvider extends ModelProvider {
             @Override
             public JsonObject get() {
                 JsonObject json = new JsonObject();
-                json.addProperty("loader", MATERIALLY_TEXTURED_LOADER.toString());
                 json.addProperty("parent", parentLoc.toString());
                 return json;
             }
@@ -131,14 +129,14 @@ public abstract class BaseModelProvider extends ModelProvider {
      * Creates a plain item model that references a block model.
      */
     protected void createItemModel(ItemModelGenerators itemModels, Block block, Identifier modelLoc) {
-        itemModels.itemModelOutput.accept(block.asItem(), ItemModelUtils.plainModel(modelLoc));
+        itemModels.itemModelOutput.accept(block.asItem(), com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(modelLoc));
     }
 
     /**
      * Creates a plain item model that references a custom model location.
      */
     protected void createItemModel(ItemModelGenerators itemModels, Item item, Identifier modelLoc) {
-        itemModels.itemModelOutput.accept(item, ItemModelUtils.plainModel(modelLoc));
+        itemModels.itemModelOutput.accept(item, com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(modelLoc));
     }
 
     /**

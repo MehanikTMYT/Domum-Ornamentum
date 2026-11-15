@@ -4,28 +4,28 @@
     "entries": [
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/door_full_spec"
         },
         "threshold": 0.0
       },
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/door_port_manteau_spec"
         },
         "threshold": 1.0
       },
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/door_vertically_striped_spec"
         },
         "threshold": 2.0
       },
       {
         "model": {
-          "type": "minecraft:model",
+          "type": "domum_ornamentum:materially_textured",
           "model": "domum_ornamentum:item/door/door_waffle_spec"
         },
         "threshold": 3.0

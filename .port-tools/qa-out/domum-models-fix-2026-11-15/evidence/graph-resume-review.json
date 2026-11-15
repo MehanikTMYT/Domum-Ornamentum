@@ -1,0 +1,2621 @@
+[
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent_imateriallytexturedblockcomponent",
+    "label": "IMateriallyTexturedBlockComponent",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 0,
+    "community_name": "Community 0",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockcomponent",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L7"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_entity_block_imateriallytexturedblockentity_imateriallytexturedblockentity",
+    "label": "IMateriallyTexturedBlockEntity",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 11,
+    "community_name": "Community 11",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockentity",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/entity/block/IMateriallyTexturedBlockEntity.java",
+    "source_location": "L10"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_materiallytexturedblockmanager",
+    "label": "MateriallyTexturedBlockManager",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 126,
+    "community_name": "Community 126",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockmanager",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L14"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_materiallytexturedblockrecipeprovider",
+    "label": "MateriallyTexturedBlockRecipeProvider",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 27,
+    "community_name": "Community 27",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockrecipeprovider",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/global/MateriallyTexturedBlockRecipeProvider.java",
+    "source_location": "L15"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider",
+    "label": "ShinglesModelProvider",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": "shinglesmodelprovider",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L40"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedmodelloader_materiallytexturedmodelloader",
+    "label": "MateriallyTexturedModelLoader",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 30,
+    "community_name": "Community 30",
+    "file_type": "code",
+    "norm_label": "materiallytexturedmodelloader",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedModelLoader.java",
+    "source_location": "L10"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler_materiallytexturedblockpreviewrenderhandler",
+    "label": "MateriallyTexturedBlockPreviewRenderHandler",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockpreviewrenderhandler",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java",
+    "source_location": "L20"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock",
+    "label": "IMateriallyTexturedBlock",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblock",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L30"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity",
+    "label": "MateriallyTexturedBlockEntity",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockentity",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L25"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel",
+    "label": "MateriallyTexturedUnbakedModel",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": "materiallytexturedunbakedmodel",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L30"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel",
+    "label": "MateriallyTexturedBlockStateModel",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockstatemodel",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L21"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder",
+    "label": "MateriallyTexturedBuilder",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 5,
+    "community_name": "Community 5",
+    "file_type": "code",
+    "norm_label": "materiallytexturedbuilder",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L19"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockmanager_imateriallytexturedblockmanager",
+    "label": "IMateriallyTexturedBlockManager",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockmanager",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockManager.java",
+    "source_location": "L6"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_abstractmateriallytexturedblockentity_abstractmateriallytexturedblockentity",
+    "label": "AbstractMateriallyTexturedBlockEntity",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 7,
+    "community_name": "Community 7",
+    "file_type": "code",
+    "norm_label": "abstractmateriallytexturedblockentity",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/AbstractMateriallyTexturedBlockEntity.java",
+    "source_location": "L11"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_resolvedtargets",
+    "label": "ResolvedTargets",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "norm_label": "resolvedtargets",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L260"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler",
+    "label": "RetexturingHandler",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "norm_label": "retexturinghandler",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L39"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblocktintprovider_materiallytexturedblocktintprovider",
+    "label": "MateriallyTexturedBlockTintProvider",
+    "_callable": true,
+    "_callable_class": true,
+    "_origin": "ast",
+    "community": 78,
+    "community_name": "Community 78",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblocktintprovider",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockTintProvider.java",
+    "source_location": "L38"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent_imateriallytexturedblockcomponent_getdefault",
+    "label": ".getDefault()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 0,
+    "community_name": "Community 0",
+    "file_type": "code",
+    "norm_label": ".getdefault()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L13"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent_imateriallytexturedblockcomponent_getid",
+    "label": ".getId()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 0,
+    "community_name": "Community 0",
+    "file_type": "code",
+    "norm_label": ".getid()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L9"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_getmodeldata",
+    "label": ".getModelData()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 1,
+    "community_name": "Community 1",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "builder",
+          "receiver_type": "ModelData",
+          "lang": "java",
+          "line": "L100"
+        }
+      ]
+    },
+    "norm_label": ".getmodeldata()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L96"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_gettexturedata",
+    "label": ".getTextureData()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 1,
+    "community_name": "Community 1",
+    "file_type": "code",
+    "norm_label": ".gettexturedata()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L105"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder_materiallytexturedbuilder",
+    "label": ".MateriallyTexturedBuilder()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedbuilder()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L33"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder_tounbaked",
+    "label": ".toUnbaked()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "x",
+          "receiver_type": "SimpleModelState",
+          "lang": "java",
+          "line": "L59"
+        },
+        {
+          "callee": "y",
+          "receiver_type": "SimpleModelState",
+          "lang": "java",
+          "line": "L59"
+        },
+        {
+          "callee": "z",
+          "receiver_type": "SimpleModelState",
+          "lang": "java",
+          "line": "L59"
+        }
+      ]
+    },
+    "norm_label": ".tounbaked()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L57"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder_with",
+    "label": ".with()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "modelState",
+          "receiver_type": "Variant",
+          "lang": "java",
+          "line": "L47"
+        },
+        {
+          "callee": "apply",
+          "receiver_type": "UnbakedMutator",
+          "lang": "java",
+          "line": "L52"
+        },
+        {
+          "callee": "parentLocation",
+          "receiver_type": "var",
+          "lang": "java",
+          "line": "L53"
+        },
+        {
+          "callee": "x",
+          "receiver_type": "var",
+          "lang": "java",
+          "line": "L54"
+        },
+        {
+          "callee": "y",
+          "receiver_type": "var",
+          "lang": "java",
+          "line": "L54"
+        },
+        {
+          "callee": "z",
+          "receiver_type": "var",
+          "lang": "java",
+          "line": "L54"
+        }
+      ]
+    },
+    "norm_label": ".with()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L43"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder_withparent",
+    "label": ".withParent()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "norm_label": ".withparent()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L24"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_entity_block_imateriallytexturedblockentity_imateriallytexturedblockentity_gettexturedata",
+    "label": ".getTextureData()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 11,
+    "community_name": "Community 11",
+    "file_type": "code",
+    "norm_label": ".gettexturedata()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/entity/block/IMateriallyTexturedBlockEntity.java",
+    "source_location": "L22"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_entity_block_imateriallytexturedblockentity_imateriallytexturedblockentity_updatetexturedatawith",
+    "label": ".updateTextureDataWith()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 11,
+    "community_name": "Community 11",
+    "file_type": "code",
+    "norm_label": ".updatetexturedatawith()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/entity/block/IMateriallyTexturedBlockEntity.java",
+    "source_location": "L16"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_materiallytexturedblockmanager_doesitemstackcontainsmaterialforslot",
+    "label": ".doesItemStackContainsMaterialForSlot()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 126,
+    "community_name": "Community 126",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "isEmpty",
+          "receiver_type": "ItemStack",
+          "lang": "java",
+          "line": "L53"
+        },
+        {
+          "callee": "getItem",
+          "receiver_type": "ItemStack",
+          "lang": "java",
+          "line": "L56"
+        },
+        {
+          "callee": "defaultBlockState",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L69"
+        }
+      ]
+    },
+    "norm_label": ".doesitemstackcontainsmaterialforslot()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L51"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_materiallytexturedblockmanager_getmaxtexturablecomponentcount",
+    "label": ".getMaxTexturableComponentCount()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 126,
+    "community_name": "Community 126",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "stream",
+          "receiver_type": "StreamSupport",
+          "lang": "java",
+          "line": "L36"
+        },
+        {
+          "callee": "toList",
+          "receiver_type": "Collectors",
+          "lang": "java",
+          "line": "L39"
+        }
+      ]
+    },
+    "norm_label": ".getmaxtexturablecomponentcount()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L30"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_materiallytexturedblockmanager_materiallytexturedblockmanager",
+    "label": ".MateriallyTexturedBlockManager()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 126,
+    "community_name": "Community 126",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedblockmanager()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L23"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getdodestroyprogress",
+    "label": ".getDODestroyProgress()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "BlockGetter",
+          "lang": "java",
+          "line": "L98"
+        },
+        {
+          "callee": "defaultBlockState",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L107"
+        }
+      ]
+    },
+    "norm_label": ".getdodestroyprogress()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L97"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getdoexplosionresistance",
+    "label": ".getDOExplosionResistance()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "BlockGetter",
+          "lang": "java",
+          "line": "L82"
+        },
+        {
+          "callee": "getExplosionResistance",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L91"
+        }
+      ]
+    },
+    "norm_label": ".getdoexplosionresistance()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L81"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getmaincomponent",
+    "label": ".getMainComponent()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "norm_label": ".getmaincomponent()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L151"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_iscorrecttoolfordrops",
+    "label": ".isCorrectToolForDrops()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "BlockGetter",
+          "lang": "java",
+          "line": "L66"
+        },
+        {
+          "callee": "isCorrectToolForDrops",
+          "receiver_type": "ItemStack",
+          "lang": "java",
+          "line": "L70"
+        },
+        {
+          "callee": "defaultBlockState",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L75"
+        }
+      ]
+    },
+    "norm_label": ".iscorrecttoolfordrops()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L64"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_filldoitemcategory",
+    "label": ".fillDOItemCategory()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 16,
+    "community_name": "Community 16",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "addAll",
+          "receiver_type": "NonNullList",
+          "lang": "java",
+          "line": "L132"
+        }
+      ]
+    },
+    "norm_label": ".filldoitemcategory()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L130"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_materiallytexturedblockentity",
+    "label": ".MateriallyTexturedBlockEntity()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 2,
+    "community_name": "Community 2",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "get",
+          "receiver_type": "MATERIALLY_TEXTURED",
+          "lang": "java",
+          "line": "L32"
+        }
+      ]
+    },
+    "norm_label": ".materiallytexturedblockentity()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L30"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent_imateriallytexturedblockcomponent_getvalidskins",
+    "label": ".getValidSkins()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 24,
+    "community_name": "Community 24",
+    "file_type": "code",
+    "norm_label": ".getvalidskins()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L11"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent_imateriallytexturedblockcomponent_isoptional",
+    "label": ".isOptional()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 24,
+    "community_name": "Community 24",
+    "file_type": "code",
+    "norm_label": ".isoptional()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L15"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_materiallytexturedblockrecipeprovider_buildrecipes",
+    "label": ".buildRecipes()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 27,
+    "community_name": "Community 27",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "requireNonNull",
+          "receiver_type": "Objects",
+          "lang": "java",
+          "line": "L27"
+        }
+      ]
+    },
+    "norm_label": ".buildrecipes()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/global/MateriallyTexturedBlockRecipeProvider.java",
+    "source_location": "L22"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_materiallytexturedblockrecipeprovider_materiallytexturedblockrecipeprovider",
+    "label": ".MateriallyTexturedBlockRecipeProvider()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 27,
+    "community_name": "Community 27",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedblockrecipeprovider()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/global/MateriallyTexturedBlockRecipeProvider.java",
+    "source_location": "L18"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_materiallytexturedblockmanager_getinstance",
+    "label": ".getInstance()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 28,
+    "community_name": "Community 28",
+    "file_type": "code",
+    "norm_label": ".getinstance()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L18"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_datageneratorsetup",
+    "label": ".dataGeneratorSetup()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "addProvider",
+          "receiver_type": "Client",
+          "lang": "java",
+          "line": "L45"
+        },
+        {
+          "callee": "getGenerator",
+          "receiver_type": "Client",
+          "lang": "java",
+          "line": "L45"
+        }
+      ]
+    },
+    "norm_label": ".datageneratorsetup()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L43"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getrotationmutator",
+    "label": ".getRotationMutator()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getrotationmutator()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L109"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getxrotmutator",
+    "label": ".getXRotMutator()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getxrotmutator()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L125"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getyfromfacing",
+    "label": ".getYFromFacing()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getyfromfacing()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L163"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getyfromhalf",
+    "label": ".getYFromHalf()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getyfromhalf()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L145"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getyfromshape",
+    "label": ".getYFromShape()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getyfromshape()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L156"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getyrotmutator",
+    "label": ".getYRotMutator()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".getyrotmutator()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L135"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_register",
+    "label": ".register()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "addProvider",
+          "receiver_type": "Client",
+          "lang": "java",
+          "line": "L197"
+        },
+        {
+          "callee": "getGenerator",
+          "receiver_type": "Client",
+          "lang": "java",
+          "line": "L197"
+        }
+      ]
+    },
+    "norm_label": ".register()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L195"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_shinglesmodelprovider",
+    "label": ".ShinglesModelProvider()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": ".shinglesmodelprovider()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L48"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedmodelloader_materiallytexturedmodelloader_materiallytexturedmodelloader",
+    "label": ".MateriallyTexturedModelLoader()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 30,
+    "community_name": "Community 30",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedmodelloader()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedModelLoader.java",
+    "source_location": "L13"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedmodelloader_materiallytexturedmodelloader_onregisterblockstatemodels",
+    "label": ".onRegisterBlockStateModels()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 30,
+    "community_name": "Community 30",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "registerModel",
+          "receiver_type": "RegisterBlockStateModels",
+          "lang": "java",
+          "line": "L19"
+        }
+      ]
+    },
+    "norm_label": ".onregisterblockstatemodels()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedModelLoader.java",
+    "source_location": "L17"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_materiallytexturedblockrecipeprovider_register",
+    "label": ".register()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 36,
+    "community_name": "Community 36",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "addProvider",
+          "receiver_type": "Server",
+          "lang": "java",
+          "line": "L36"
+        },
+        {
+          "callee": "getGenerator",
+          "receiver_type": "Server",
+          "lang": "java",
+          "line": "L36"
+        },
+        {
+          "callee": "getLookupProvider",
+          "receiver_type": "Server",
+          "lang": "java",
+          "line": "L36"
+        }
+      ]
+    },
+    "norm_label": ".register()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/global/MateriallyTexturedBlockRecipeProvider.java",
+    "source_location": "L34"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler_materiallytexturedblockpreviewrenderhandler_onrenderlevelstage",
+    "label": ".onRenderLevelStage()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getPoseStack",
+          "receiver_type": "AfterLevel",
+          "lang": "java",
+          "line": "L27"
+        }
+      ]
+    },
+    "norm_label": ".onrenderlevelstage()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java",
+    "source_location": "L24"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler_materiallytexturedblockpreviewrenderhandler_renderghost",
+    "label": ".renderGhost()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getInstance",
+          "receiver_type": "Minecraft",
+          "lang": "java",
+          "line": "L66"
+        }
+      ]
+    },
+    "norm_label": ".renderghost()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java",
+    "source_location": "L53"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler_materiallytexturedblockpreviewrenderhandler_rendermateriallytexturedblockpreview",
+    "label": ".renderMateriallyTexturedBlockPreview()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getInstance",
+          "receiver_type": "Minecraft",
+          "lang": "java",
+          "line": "L33"
+        },
+        {
+          "callee": "isSpectator",
+          "receiver_type": "Player",
+          "lang": "java",
+          "line": "L38"
+        },
+        {
+          "callee": "isEmpty",
+          "receiver_type": "ItemStack",
+          "lang": "java",
+          "line": "L42"
+        },
+        {
+          "callee": "atLowerCornerOf",
+          "receiver_type": "Vec3",
+          "lang": "java",
+          "line": "L45"
+        },
+        {
+          "callee": "immediate",
+          "receiver_type": "MultiBufferSource",
+          "lang": "java",
+          "line": "L48"
+        },
+        {
+          "callee": "endBatch",
+          "receiver_type": "BufferSource",
+          "lang": "java",
+          "line": "L50"
+        }
+      ]
+    },
+    "norm_label": ".rendermateriallytexturedblockpreview()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java",
+    "source_location": "L31"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_util_itemstackutils_itemstackutils_gethandwithmateriallytextureditemstackfromplayer",
+    "label": ".getHandWithMateriallyTexturedItemStackFromPlayer()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getMainHandItem",
+          "receiver_type": "Player",
+          "lang": "java",
+          "line": "L46"
+        },
+        {
+          "callee": "getOffhandItem",
+          "receiver_type": "Player",
+          "lang": "java",
+          "line": "L48"
+        }
+      ]
+    },
+    "norm_label": ".gethandwithmateriallytextureditemstackfromplayer()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/util/ItemStackUtils.java",
+    "source_location": "L43"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_util_itemstackutils_itemstackutils_getmateriallytextureditemstackfromplayer",
+    "label": ".getMateriallyTexturedItemStackFromPlayer()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getMainHandItem",
+          "receiver_type": "Player",
+          "lang": "java",
+          "line": "L18"
+        },
+        {
+          "callee": "getOffhandItem",
+          "receiver_type": "Player",
+          "lang": "java",
+          "line": "L19"
+        },
+        {
+          "callee": "getItem",
+          "receiver_type": "ItemStack",
+          "lang": "java",
+          "line": "L21"
+        },
+        {
+          "callee": "getKey",
+          "receiver_type": "Registry",
+          "lang": "java",
+          "line": "L29"
+        }
+      ]
+    },
+    "norm_label": ".getmateriallytextureditemstackfromplayer()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/util/ItemStackUtils.java",
+    "source_location": "L17"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_buildrecipes",
+    "label": ".buildRecipes()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "norm_label": ".buildrecipes()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L35"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getdosoundtype",
+    "label": ".getDOSoundType()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "LevelReader",
+          "lang": "java",
+          "line": "L114"
+        },
+        {
+          "callee": "getSoundType",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L123"
+        }
+      ]
+    },
+    "norm_label": ".getdosoundtype()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L113"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_usesworldspecifictinting",
+    "label": ".usesWorldSpecificTinting()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "norm_label": ".usesworldspecifictinting()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L161"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_bake",
+    "label": ".bake()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "bake",
+          "receiver_type": "SimpleModelWrapper",
+          "lang": "java",
+          "line": "L86"
+        }
+      ]
+    },
+    "norm_label": ".bake()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L83"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_codec",
+    "label": ".codec()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".codec()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L73"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel",
+    "label": ".MateriallyTexturedUnbakedModel()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedunbakedmodel()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L46"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_parentlocation",
+    "label": ".parentLocation()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".parentlocation()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L57"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_resolvedependencies",
+    "label": ".resolveDependencies()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "markDependency",
+          "receiver_type": "Resolver",
+          "lang": "java",
+          "line": "L80"
+        }
+      ]
+    },
+    "norm_label": ".resolvedependencies()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L78"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_x",
+    "label": ".x()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".x()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L61"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_y",
+    "label": ".y()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".y()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L65"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_materiallytexturedunbakedmodel_z",
+    "label": ".z()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": ".z()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L69"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getcomponents",
+    "label": ".getComponents()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 44,
+    "community_name": "Community 44",
+    "file_type": "code",
+    "norm_label": ".getcomponents()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L32"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_imateriallytexturedblock_getrandommaterials",
+    "label": ".getRandomMaterials()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 44,
+    "community_name": "Community 44",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "stream",
+          "receiver_type": "StreamSupport",
+          "lang": "java",
+          "line": "L44"
+        },
+        {
+          "callee": "current",
+          "receiver_type": "ThreadLocalRandom",
+          "lang": "java",
+          "line": "L49"
+        }
+      ]
+    },
+    "norm_label": ".getrandommaterials()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L37"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel_collectparts",
+    "label": ".collectParts()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "collectParts",
+          "receiver_type": "BlockStateModel",
+          "lang": "java",
+          "line": "L62"
+        },
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "BlockAndTintGetter",
+          "lang": "java",
+          "line": "L64"
+        }
+      ]
+    },
+    "norm_label": ".collectparts()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L58"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel_creategeometrykey",
+    "label": ".createGeometryKey()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getBlockEntity",
+          "receiver_type": "BlockAndTintGetter",
+          "lang": "java",
+          "line": "L45"
+        }
+      ]
+    },
+    "norm_label": ".creategeometrykey()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L42"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel_materialflags",
+    "label": ".materialFlags()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "materialFlags",
+          "receiver_type": "BlockStateModel",
+          "lang": "java",
+          "line": "L39"
+        }
+      ]
+    },
+    "norm_label": ".materialflags()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L35"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel",
+    "label": ".MateriallyTexturedBlockStateModel()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": ".materiallytexturedblockstatemodel()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L26"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_materiallytexturedblockstatemodel_particlematerial",
+    "label": ".particleMaterial()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "particleMaterial",
+          "receiver_type": "BlockStateModel",
+          "lang": "java",
+          "line": "L32"
+        }
+      ]
+    },
+    "norm_label": ".particlematerial()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L28"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_retexturedparts",
+    "label": ".retexturedParts()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "values",
+          "receiver_type": "Direction",
+          "lang": "java",
+          "line": "L84"
+        },
+        {
+          "callee": "materialFlags",
+          "receiver_type": "QuadCollection",
+          "lang": "java",
+          "line": "L109"
+        }
+      ]
+    },
+    "norm_label": ".retexturedparts()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L65"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockmanager_imateriallytexturedblockmanager_doesitemstackcontainsmaterialforslot",
+    "label": ".doesItemStackContainsMaterialForSlot()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": ".doesitemstackcontainsmaterialforslot()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockManager.java",
+    "source_location": "L14"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockmanager_imateriallytexturedblockmanager_getinstance",
+    "label": ".getInstance()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": ".getinstance()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockManager.java",
+    "source_location": "L8"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockmanager_imateriallytexturedblockmanager_getmaxtexturablecomponentcount",
+    "label": ".getMaxTexturableComponentCount()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": ".getmaxtexturablecomponentcount()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockManager.java",
+    "source_location": "L12"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_idomumornamentumapi_idomumornamentumapi_getmateriallytexturedblockmanager",
+    "label": ".getMateriallyTexturedBlockManager()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": ".getmateriallytexturedblockmanager()",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/IDomumOrnamentumApi.java",
+    "source_location": "L33"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_api_domumornamentumapi_domumornamentumapi_getmateriallytexturedblockmanager",
+    "label": ".getMateriallyTexturedBlockManager()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": ".getmateriallytexturedblockmanager()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/api/DomumOrnamentumAPI.java",
+    "source_location": "L29"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getknownblocks",
+    "label": ".getKnownBlocks()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 6,
+    "community_name": "Community 6",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "of",
+          "receiver_type": "Stream",
+          "lang": "java",
+          "line": "L174"
+        }
+      ]
+    },
+    "norm_label": ".getknownblocks()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L172"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getknownitems",
+    "label": ".getKnownItems()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 6,
+    "community_name": "Community 6",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "of",
+          "receiver_type": "Stream",
+          "lang": "java",
+          "line": "L183"
+        }
+      ]
+    },
+    "norm_label": ".getknownitems()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L181"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_getname",
+    "label": ".getName()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 6,
+    "community_name": "Community 6",
+    "file_type": "code",
+    "norm_label": ".getname()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L190"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_applyimplicitcomponents",
+    "label": ".applyImplicitComponents()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "getOrDefault",
+          "receiver_type": "DataComponentGetter",
+          "lang": "java",
+          "line": "L116"
+        }
+      ]
+    },
+    "norm_label": ".applyimplicitcomponents()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L112"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_collectimplicitcomponents",
+    "label": ".collectImplicitComponents()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "set",
+          "receiver_type": "@NonNull Builder",
+          "lang": "java",
+          "line": "L123"
+        }
+      ]
+    },
+    "norm_label": ".collectimplicitcomponents()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L119"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_getupdatepacket",
+    "label": ".getUpdatePacket()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "create",
+          "receiver_type": "ClientboundBlockEntityDataPacket",
+          "lang": "java",
+          "line": "L61"
+        }
+      ]
+    },
+    "norm_label": ".getupdatepacket()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L58"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_getupdatetag",
+    "label": ".getUpdateTag()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": ".getupdatetag()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L52"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_loadadditional",
+    "label": ".loadAdditional()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "read",
+          "receiver_type": "ValueInput",
+          "lang": "java",
+          "line": "L75"
+        }
+      ]
+    },
+    "norm_label": ".loadadditional()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L71"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_onload",
+    "label": ".onLoad()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": ".onload()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L90"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_removecomponentsfromtag",
+    "label": ".removeComponentsFromTag()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "discard",
+          "receiver_type": "ValueOutput",
+          "lang": "java",
+          "line": "L130"
+        }
+      ]
+    },
+    "norm_label": ".removecomponentsfromtag()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L126"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_requestmodeldataupdate",
+    "label": ".requestModelDataUpdate()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": ".requestmodeldataupdate()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L78"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_saveadditional",
+    "label": ".saveAdditional()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "store",
+          "receiver_type": "ValueOutput",
+          "lang": "java",
+          "line": "L68"
+        }
+      ]
+    },
+    "norm_label": ".saveadditional()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L64"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_materiallytexturedblockentity_updatetexturedatawith",
+    "label": ".updateTextureDataWith()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": ".updatetexturedatawith()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L35"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_abstractmateriallytexturedblockentity_abstractmateriallytexturedblockentity_abstractmateriallytexturedblockentity",
+    "label": ".AbstractMateriallyTexturedBlockEntity()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 7,
+    "community_name": "Community 7",
+    "file_type": "code",
+    "norm_label": ".abstractmateriallytexturedblockentity()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/AbstractMateriallyTexturedBlockEntity.java",
+    "source_location": "L19"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_clearcache",
+    "label": ".clearCache()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "clear",
+          "receiver_type": "TARGET_CACHE",
+          "lang": "java",
+          "line": "L50"
+        }
+      ]
+    },
+    "norm_label": ".clearcache()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L49"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_processquad",
+    "label": ".processQuad()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "norm_label": ".processquad()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L119"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_resolve",
+    "label": ".resolve()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "naturalOrder",
+          "receiver_type": "Comparator",
+          "lang": "java",
+          "line": "L195"
+        },
+        {
+          "callee": "copyOf",
+          "receiver_type": "List",
+          "lang": "java",
+          "line": "L210"
+        },
+        {
+          "callee": "copyOf",
+          "receiver_type": "Map",
+          "lang": "java",
+          "line": "L210"
+        }
+      ]
+    },
+    "norm_label": ".resolve()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L192"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_resolvedtargets",
+    "label": ".resolvedTargets()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "size",
+          "receiver_type": "TARGET_CACHE",
+          "lang": "java",
+          "line": "L182"
+        },
+        {
+          "callee": "clear",
+          "receiver_type": "TARGET_CACHE",
+          "lang": "java",
+          "line": "L183"
+        },
+        {
+          "callee": "computeIfAbsent",
+          "receiver_type": "TARGET_CACHE",
+          "lang": "java",
+          "line": "L185"
+        }
+      ]
+    },
+    "norm_label": ".resolvedtargets()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L181"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_resolvetarget",
+    "label": ".resolveTarget()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "defaultBlockState",
+          "receiver_type": "Block",
+          "lang": "java",
+          "line": "L216"
+        },
+        {
+          "callee": "get",
+          "receiver_type": "RANDOM",
+          "lang": "java",
+          "line": "L226"
+        },
+        {
+          "callee": "setSeed",
+          "receiver_type": "RandomSource",
+          "lang": "java",
+          "line": "L227"
+        },
+        {
+          "callee": "getSeed",
+          "receiver_type": "BlockState",
+          "lang": "java",
+          "line": "L227"
+        },
+        {
+          "callee": "getInstance",
+          "receiver_type": "Minecraft",
+          "lang": "java",
+          "line": "L230"
+        },
+        {
+          "callee": "values",
+          "receiver_type": "Direction",
+          "lang": "java",
+          "line": "L238"
+        },
+        {
+          "callee": "materialInfo",
+          "receiver_type": "BakedQuad",
+          "lang": "java",
+          "line": "L252"
+        }
+      ]
+    },
+    "norm_label": ".resolvetarget()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L214"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_retexturequad",
+    "label": ".retextureQuad()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "materialInfo",
+          "receiver_type": "BakedQuad",
+          "lang": "java",
+          "line": "L154"
+        },
+        {
+          "callee": "getU0",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L157"
+        },
+        {
+          "callee": "getU1",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L158"
+        },
+        {
+          "callee": "getV0",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L159"
+        },
+        {
+          "callee": "getV1",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L160"
+        },
+        {
+          "callee": "clamp",
+          "receiver_type": "Mth",
+          "lang": "java",
+          "line": "L165"
+        },
+        {
+          "callee": "u",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L165"
+        },
+        {
+          "callee": "v",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L166"
+        },
+        {
+          "callee": "setUv",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L168"
+        },
+        {
+          "callee": "getU",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L168"
+        },
+        {
+          "callee": "getV",
+          "receiver_type": "TextureAtlasSprite",
+          "lang": "java",
+          "line": "L168"
+        },
+        {
+          "callee": "setSprite",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L173"
+        },
+        {
+          "callee": "sprite",
+          "receiver_type": "MaterialInfo",
+          "lang": "java",
+          "line": "L173"
+        },
+        {
+          "callee": "layer",
+          "receiver_type": "MaterialInfo",
+          "lang": "java",
+          "line": "L173"
+        },
+        {
+          "callee": "itemRenderType",
+          "receiver_type": "MaterialInfo",
+          "lang": "java",
+          "line": "L173"
+        },
+        {
+          "callee": "setTintIndex",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L176"
+        },
+        {
+          "callee": "toBakedQuad",
+          "receiver_type": "MutableQuad",
+          "lang": "java",
+          "line": "L178"
+        }
+      ]
+    },
+    "norm_label": ".retexturequad()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L152"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_spritename",
+    "label": ".spriteName()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "materialInfo",
+          "receiver_type": "BakedQuad",
+          "lang": "java",
+          "line": "L256"
+        }
+      ]
+    },
+    "norm_label": ".spritename()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L255"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_retexturinghandler_targetsfor",
+    "label": ".targetsFor()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 75,
+    "community_name": "Community 75",
+    "file_type": "code",
+    "norm_label": ".targetsfor()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L57"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblocktintprovider_materiallytexturedblocktintprovider_onaddclientreloadlisteners",
+    "label": ".onAddClientReloadListeners()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 78,
+    "community_name": "Community 78",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "addListener",
+          "receiver_type": "AddClientReloadListenersEvent",
+          "lang": "java",
+          "line": "L78"
+        },
+        {
+          "callee": "fromNamespaceAndPath",
+          "receiver_type": "Identifier",
+          "lang": "java",
+          "line": "L78"
+        }
+      ]
+    },
+    "norm_label": ".onaddclientreloadlisteners()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockTintProvider.java",
+    "source_location": "L75"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblocktintprovider_materiallytexturedblocktintprovider_onregisterclientextensions",
+    "label": ".onRegisterClientExtensions()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 78,
+    "community_name": "Community 78",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "registerBlock",
+          "receiver_type": "RegisterClientExtensionsEvent",
+          "lang": "java",
+          "line": "L71"
+        }
+      ]
+    },
+    "norm_label": ".onregisterclientextensions()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockTintProvider.java",
+    "source_location": "L64"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_materiallytexturedbuilder_multivariantwithparent",
+    "label": ".multiVariantWithParent()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 9,
+    "community_name": "Community 9",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "of",
+          "receiver_type": "MultiVariant",
+          "lang": "java",
+          "line": "L30"
+        }
+      ]
+    },
+    "norm_label": ".multivariantwithparent()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L29"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_registermodels",
+    "label": ".registerModels()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 9,
+    "community_name": "Community 9",
+    "file_type": "code",
+    "norm_label": ".registermodels()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L52"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_shinglesmodelprovider_registerstatesandmodelsfor",
+    "label": ".registerStatesAndModelsFor()",
+    "_callable": true,
+    "_origin": "ast",
+    "community": 9,
+    "community_name": "Community 9",
+    "file_type": "code",
+    "metadata": {
+      "unresolved_calls": [
+        {
+          "callee": "values",
+          "receiver_type": "StairsShape",
+          "lang": "java",
+          "line": "L70"
+        },
+        {
+          "callee": "multiPart",
+          "receiver_type": "MultiPartGenerator",
+          "lang": "java",
+          "line": "L77"
+        },
+        {
+          "callee": "getPossibleValues",
+          "receiver_type": "HORIZONTAL_FACING",
+          "lang": "java",
+          "line": "L79"
+        },
+        {
+          "callee": "getPossibleValues",
+          "receiver_type": "HALF",
+          "lang": "java",
+          "line": "L81"
+        },
+        {
+          "callee": "with",
+          "receiver_type": "MultiVariant",
+          "lang": "java",
+          "line": "L87"
+        },
+        {
+          "callee": "with",
+          "receiver_type": "MultiPartGenerator",
+          "lang": "java",
+          "line": "L89"
+        },
+        {
+          "callee": "plainModel",
+          "receiver_type": "ItemModelUtils",
+          "lang": "java",
+          "line": "L105"
+        }
+      ]
+    },
+    "norm_label": ".registerstatesandmodelsfor()",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L59"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager",
+    "label": "MateriallyTexturedBlockManager.java",
+    "_origin": "ast",
+    "community": 10,
+    "community_name": "Community 10",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockmanager.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/block/MateriallyTexturedBlockManager.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder_java_variantmutator",
+    "label": "VariantMutator",
+    "_origin": "ast",
+    "community": 108,
+    "community_name": "Community 108",
+    "file_type": "code",
+    "norm_label": "variantmutator",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "com_ldtteam_domumornamentum_entity_block_abstractmateriallytexturedblockentity",
+    "label": "com.ldtteam.domumornamentum.entity.block.AbstractMateriallyTexturedBlockEntity",
+    "_origin": "ast",
+    "community": 11,
+    "community_name": "Community 11",
+    "file_type": "code",
+    "norm_label": "com.ldtteam.domumornamentum.entity.block.abstractmateriallytexturedblockentity",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent",
+    "label": "IMateriallyTexturedBlockComponent.java",
+    "_origin": "ast",
+    "community": 11,
+    "community_name": "Community 11",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockcomponent.java",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockComponent.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_block_materiallytexturedblockmanager_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 126,
+    "community_name": "Community 126",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock",
+    "label": "IMateriallyTexturedBlock.java",
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblock.java",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlock.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_entity_block_imateriallytexturedblockentity",
+    "label": "IMateriallyTexturedBlockEntity.java",
+    "_origin": "ast",
+    "community": 14,
+    "community_name": "Community 14",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockentity.java",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/entity/block/IMateriallyTexturedBlockEntity.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedmodelloader_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 214,
+    "community_name": "Community 214",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider",
+    "label": "MateriallyTexturedBlockRecipeProvider.java",
+    "_origin": "ast",
+    "community": 27,
+    "community_name": "Community 27",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockrecipeprovider.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/global/MateriallyTexturedBlockRecipeProvider.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 27,
+    "community_name": "Community 27",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_java_provider",
+    "label": "Provider",
+    "_origin": "ast",
+    "community": 276,
+    "community_name": "Community 276",
+    "file_type": "code",
+    "norm_label": "provider",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_java_client",
+    "label": "Client",
+    "_origin": "ast",
+    "community": 3,
+    "community_name": "Community 3",
+    "file_type": "code",
+    "norm_label": "client",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedmodelloader",
+    "label": "MateriallyTexturedModelLoader.java",
+    "_origin": "ast",
+    "community": 30,
+    "community_name": "Community 30",
+    "file_type": "code",
+    "norm_label": "materiallytexturedmodelloader.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedModelLoader.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "abstractmateriallytexturedblockentity",
+    "label": "AbstractMateriallyTexturedBlockEntity",
+    "_origin": "ast",
+    "community": 34,
+    "community_name": "Community 34",
+    "file_type": "code",
+    "norm_label": "abstractmateriallytexturedblockentity",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_global_materiallytexturedblockrecipeprovider_java_server",
+    "label": "Server",
+    "_origin": "ast",
+    "community": 36,
+    "community_name": "Community 36",
+    "file_type": "code",
+    "norm_label": "server",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler",
+    "label": "MateriallyTexturedBlockPreviewRenderHandler.java",
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockpreviewrenderhandler.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockPreviewRenderHandler.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblockpreviewrenderhandler_java_buffersource",
+    "label": "BufferSource",
+    "_origin": "ast",
+    "community": 38,
+    "community_name": "Community 38",
+    "file_type": "code",
+    "norm_label": "buffersource",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity",
+    "label": "MateriallyTexturedBlockEntity.java",
+    "_origin": "ast",
+    "community": 4,
+    "community_name": "Community 4",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblockentity.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/MateriallyTexturedBlockEntity.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel",
+    "label": "MateriallyTexturedUnbakedModel.java",
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": "materiallytexturedunbakedmodel.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedUnbakedModel.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedunbakedmodel_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 41,
+    "community_name": "Community 41",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblock_java_imateriallytexturedblockcomponent",
+    "label": "IMateriallyTexturedBlockComponent",
+    "_origin": "ast",
+    "community": 44,
+    "community_name": "Community 44",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockcomponent",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel",
+    "label": "block/MateriallyTexturedBlockStateModel.java",
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "block/materiallytexturedblockstatemodel.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/block/MateriallyTexturedBlockStateModel.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_java_nonnull_baked",
+    "label": "@NonNull Baked",
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "@nonnull baked",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_block_materiallytexturedblockstatemodel_java_suppresswarnings",
+    "label": "SuppressWarnings",
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "suppresswarnings",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler_java_suppresswarnings",
+    "label": "SuppressWarnings",
+    "_origin": "ast",
+    "community": 49,
+    "community_name": "Community 49",
+    "file_type": "code",
+    "norm_label": "suppresswarnings",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_loader_materiallytexturedbuilder",
+    "label": "MateriallyTexturedBuilder.java",
+    "_origin": "ast",
+    "community": 5,
+    "community_name": "Community 5",
+    "file_type": "code",
+    "norm_label": "materiallytexturedbuilder.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/loader/MateriallyTexturedBuilder.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider",
+    "label": "ShinglesModelProvider.java",
+    "_origin": "ast",
+    "community": 5,
+    "community_name": "Community 5",
+    "file_type": "code",
+    "norm_label": "shinglesmodelprovider.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/datagen/shingle/normal/ShinglesModelProvider.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_api_java_com_ldtteam_domumornamentum_block_imateriallytexturedblockmanager",
+    "label": "IMateriallyTexturedBlockManager.java",
+    "_origin": "ast",
+    "community": 59,
+    "community_name": "Community 59",
+    "file_type": "code",
+    "norm_label": "imateriallytexturedblockmanager.java",
+    "source_file": "src/api/java/com/ldtteam/domumornamentum/block/IMateriallyTexturedBlockManager.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_datagen_shingle_normal_shinglesmodelprovider_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 6,
+    "community_name": "Community 6",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_model_retexturinghandler",
+    "label": "RetexturingHandler.java",
+    "_origin": "ast",
+    "community": 62,
+    "community_name": "Community 62",
+    "file_type": "code",
+    "norm_label": "retexturinghandler.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/model/RetexturingHandler.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_java_nonnull_builder",
+    "label": "@NonNull Builder",
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": "@nonnull builder",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_java_nonnull_provider",
+    "label": "@NonNull Provider",
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": "@nonnull provider",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_java_override",
+    "label": "Override",
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": "override",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_materiallytexturedblockentity_java_suppresswarnings",
+    "label": "SuppressWarnings",
+    "_origin": "ast",
+    "community": 64,
+    "community_name": "Community 64",
+    "file_type": "code",
+    "norm_label": "suppresswarnings",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_entity_block_abstractmateriallytexturedblockentity",
+    "label": "AbstractMateriallyTexturedBlockEntity.java",
+    "_origin": "ast",
+    "community": 7,
+    "community_name": "Community 7",
+    "file_type": "code",
+    "norm_label": "abstractmateriallytexturedblockentity.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/entity/block/AbstractMateriallyTexturedBlockEntity.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "src_main_java_com_ldtteam_domumornamentum_client_event_handlers_materiallytexturedblocktintprovider",
+    "label": "MateriallyTexturedBlockTintProvider.java",
+    "_origin": "ast",
+    "community": 78,
+    "community_name": "Community 78",
+    "file_type": "code",
+    "norm_label": "materiallytexturedblocktintprovider.java",
+    "source_file": "src/main/java/com/ldtteam/domumornamentum/client/event/handlers/MateriallyTexturedBlockTintProvider.java",
+    "source_location": "L1"
+  },
+  {
+    "id": "com_ldtteam_domumornamentum_block_imateriallytexturedblockcomponent",
+    "label": "com.ldtteam.domumornamentum.block.IMateriallyTexturedBlockComponent",
+    "_origin": "ast",
+    "community": 8,
+    "community_name": "Community 8",
+    "file_type": "code",
+    "norm_label": "com.ldtteam.domumornamentum.block.imateriallytexturedblockcomponent",
+    "source_file": "",
+    "source_location": ""
+  },
+  {
+    "id": "materiallytexturedblockstatemodel",
+    "label": "materiallytexturedblockstatemodel",
+    "community": 41,
+    "community_name": "Community 41",
+    "external": true,
+    "file_type": "concept",
+    "norm_label": "materiallytexturedblockstatemodel",
+    "source_file": "",
+    "type": "external"
+  }
+]

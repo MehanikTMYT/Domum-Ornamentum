@@ -57,7 +57,7 @@ public class FloatingCarpetModelProvider extends BaseModelProvider {
         // Item model: references vanilla carpet model
         itemModels.itemModelOutput.accept(
                 floatingCarpetBlock.asItem(),
-                ItemModelUtils.plainModel(vanillaCarpetModel)
+                com.ldtteam.domumornamentum.client.model.item.MateriallyTexturedItemModel.unbaked(vanillaCarpetModel)
         );
     }
 

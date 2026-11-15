@@ -1,7 +1,7 @@
 package com.ldtteam.domumornamentum.client.model.block;
 
 import com.ldtteam.domumornamentum.client.model.RetexturingHandler;
-import com.ldtteam.domumornamentum.entity.block.MateriallyTexturedBlockEntity;
+import com.ldtteam.domumornamentum.entity.block.IMateriallyTexturedBlockEntity;
 import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModel;
 import net.minecraft.client.renderer.block.dispatch.BlockStateModelPart;
@@ -25,6 +25,8 @@ public class MateriallyTexturedBlockStateModel implements BlockStateModel, Dynam
 
     public MateriallyTexturedBlockStateModel(final BlockStateModel parent) {this.parent = parent;}
 
+    private record GeometryKey(MateriallyTexturedBlockStateModel model, com.ldtteam.domumornamentum.client.model.data.MaterialTextureData data) {}
+
     @SuppressWarnings("deprecation")
     @Override
     public Material.@NonNull Baked particleMaterial()
@@ -43,10 +45,10 @@ public class MateriallyTexturedBlockStateModel implements BlockStateModel, Dynam
     public @Nullable Object createGeometryKey(final BlockAndTintGetter level, final @NonNull BlockPos pos, final @NonNull BlockState state, final @NonNull RandomSource random)
     {
         final BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (!(blockEntity instanceof MateriallyTexturedBlockEntity materiallyTexturedBlockEntity))
+        if (!(blockEntity instanceof IMateriallyTexturedBlockEntity materiallyTexturedBlockEntity))
             return null;
 
-        return materiallyTexturedBlockEntity.getTextureData();
+        return new GeometryKey(this, materiallyTexturedBlockEntity.getRenderTextureData());
     }
 
     @Override
@@ -62,9 +64,9 @@ public class MateriallyTexturedBlockStateModel implements BlockStateModel, Dynam
         parent.collectParts(level, pos, state, random, parentParts);
 
         final var blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof MateriallyTexturedBlockEntity texturedBlockEntity) {
+        if (blockEntity instanceof IMateriallyTexturedBlockEntity texturedBlockEntity) {
             //retexturedParts passes the parent parts through unchanged when the mapping is empty
-            parts.addAll(RetexturingHandler.retexturedParts(parentParts, texturedBlockEntity.getTextureData(), pos, level));
+            parts.addAll(RetexturingHandler.retexturedParts(parentParts, texturedBlockEntity.getRenderTextureData(), pos, level));
         } else {
             parts.addAll(parentParts);
         }
