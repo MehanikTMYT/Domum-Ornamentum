@@ -26,6 +26,7 @@ public interface IDoItem
         return ImmutableList.of(Constants.resLocDO("onlyone"));
     }
 
+
     /**
      * If previews should be rendered.
      * @return true if so.

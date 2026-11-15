@@ -1,8 +1,11 @@
 package com.ldtteam.domumornamentum.block.types;
 
+import com.ldtteam.domumornamentum.util.EnumHelper;
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;
 import org.jspecify.annotations.NonNull;
+
+import java.util.Map;
 
 // Creates types for TimberFrame with different variants of wood and texture
 
@@ -61,5 +64,12 @@ public enum TimberFrameType implements StringRepresentable
     public boolean isRotatable()
     {
         return this.rotatable;
+    }
+
+    private static final Map<String, TimberFrameType> ID_MAP = EnumHelper.createMap(TimberFrameType.class);
+
+    public static TimberFrameType fromString(final String s, final TimberFrameType defaultType)
+    {
+        return EnumHelper.fromString(ID_MAP, s, defaultType);
     }
 }

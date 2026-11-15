@@ -60,6 +60,8 @@ public final class ModBlocks implements IModBlocks {
     private static final DeferredBlock<ShingleBlock> SHINGLE;
     private static final DeferredBlock<ShingleBlock> SHINGLE_FLAT;
     private static final DeferredBlock<ShingleBlock> SHINGLE_FLAT_LOWER;
+    private static final DeferredBlock<ShingleBlock> SHINGLE_STEEP;
+    private static final DeferredBlock<ShingleBlock> SHINGLE_STEEP_LOWER;
     private static final DeferredBlock<ShingleSlabBlock> SHINGLE_SLAB;
     private static final DeferredBlock<PaperWallBlock> PAPER_WALL;
     private static final DeferredBlock<BarrelBlock> STANDING_BARREL;
@@ -89,6 +91,8 @@ public final class ModBlocks implements IModBlocks {
         SHINGLE = registerCustomBlockItem("shingle", ShingleBlock::new, ShingleBlockItem::new);
         SHINGLE_FLAT = registerCustomBlockItem("shingle_flat", ShingleBlock::new, ShingleBlockItem::new);
         SHINGLE_FLAT_LOWER = registerCustomBlockItem("shingle_flat_lower", ShingleBlock::new, ShingleBlockItem::new);
+        SHINGLE_STEEP = registerCustomBlockItem("shingle_steep", ShingleBlock::new, ShingleBlockItem::new);
+        SHINGLE_STEEP_LOWER = registerCustomBlockItem("shingle_steep_lower", ShingleBlock::new, ShingleBlockItem::new);
 
         SHINGLE_SLAB = registerCustomBlockItem("shingle_slab", ShingleSlabBlock::new, ShingleSlabBlockItem::new);
         PAPER_WALL = registerCustomBlockItem("blockpaperwall", PaperWallBlock::new, PaperwallBlockItem::new);
@@ -190,6 +194,8 @@ public final class ModBlocks implements IModBlocks {
             case DEFAULT -> ModBlocks.SHINGLE.get();
             case FLAT -> ModBlocks.SHINGLE_FLAT.get();
             case FLAT_LOWER -> ModBlocks.SHINGLE_FLAT_LOWER.get();
+            case STEEP -> ModBlocks.SHINGLE_STEEP.get();
+            case STEEP_LOWER -> ModBlocks.SHINGLE_STEEP_LOWER.get();
         };
     }
 
@@ -384,4 +390,27 @@ public final class ModBlocks implements IModBlocks {
                 .map(name -> ITEMS.getRegistry().get().get(name))
                 .toArray(Item[]::new);
     }
+
+    // Legacy API accessors use the same blocks as the list-based API.
+    @Override
+    public Block getRoundPillar() { return getPillars().get(0); }
+
+    @Override
+    public Block getVoxelPillar() { return getPillars().get(1); }
+
+    @Override
+    public Block getSqaurePillar() { return getPillars().get(2); }
+
+    @Override
+    public Block getAllBrickBlock() { return getAllBrickBlocks().get(0); }
+
+    @Override
+    public Block getAllBrickDarkBlock() { return getAllBrickBlocks().get(1); }
+
+    @Override
+    public Block getAllBrickStairBlock() { return getAllBrickStairBlocks().get(0); }
+
+    @Override
+    public Block getAllBrickDarkStairBlock() { return getAllBrickStairBlocks().get(1); }
+
 }

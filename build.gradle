@@ -83,3 +83,10 @@ runs.configureEach { run ->
                 '--existing', file('src/main/resources/').absolutePath)
     }
 }
+
+// fleet QA quickPlay (run-client.sh): client quickPlaySingleplayer passthrough
+runs.configureEach { run ->
+    if (run.name == 'client' && project.hasProperty('quickPlay')) {
+        run.arguments.addAll('--quickPlaySingleplayer', project.property('quickPlay').toString(), '--width', '1280', '--height', '720')
+    }
+}

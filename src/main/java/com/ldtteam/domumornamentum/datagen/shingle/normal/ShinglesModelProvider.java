@@ -174,7 +174,9 @@ public class ShinglesModelProvider extends BaseModelProvider {
         return Stream.of(
                 ModBlocks.getInstance().getShingle(ShingleHeightType.DEFAULT),
                 ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT),
-                ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT_LOWER)
+                ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT_LOWER),
+                ModBlocks.getInstance().getShingle(ShingleHeightType.STEEP),
+                ModBlocks.getInstance().getShingle(ShingleHeightType.STEEP_LOWER)
         ).map(BuiltInRegistries.BLOCK::wrapAsHolder);
     }
 
@@ -183,7 +185,9 @@ public class ShinglesModelProvider extends BaseModelProvider {
         return Stream.of(
                 ModBlocks.getInstance().getShingle(ShingleHeightType.DEFAULT).asItem(),
                 ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT).asItem(),
-                ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT_LOWER).asItem()
+                ModBlocks.getInstance().getShingle(ShingleHeightType.FLAT_LOWER).asItem(),
+                ModBlocks.getInstance().getShingle(ShingleHeightType.STEEP).asItem(),
+                ModBlocks.getInstance().getShingle(ShingleHeightType.STEEP_LOWER).asItem()
         ).map(BuiltInRegistries.ITEM::wrapAsHolder);
     }
 
